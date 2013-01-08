@@ -26,7 +26,6 @@
  *********************************************************************************/
 package eu.monnetproject.lemon.generator.lela.status;
 
-import eu.monnetproject.web.WebServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -38,10 +37,9 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author John McCrae
  */
-public class StatusServlet extends HttpServlet implements WebServlet {
+public class StatusServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     
-    @Override
     public String getPath() {
         return "/reviewstatus";
     }

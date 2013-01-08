@@ -22,7 +22,7 @@
         </dependency>
         <dependency>
             <groupId>eu.monnetproject</groupId>
-            <artifactId>nlp.core</artifactId>
+            <artifactId>lemon.generator.nlp.core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -54,19 +54,19 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>nlp.basic</artifactId>
+            <artifactId>lemon.generator.nlp.basic</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>nlp.label</artifactId>
+            <artifactId>ontology.label</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>nlp.stanford</artifactId>
+            <artifactId>lemon.generator.nlp.stanford</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
@@ -83,14 +83,9 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>nlp.owlapi</artifactId>
+            <artifactId>ontology.owlapi</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>core</artifactId>
-            <version>${project.version}</version>
         </dependency>
     </dependencies>
 
@@ -104,7 +99,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>eu.monnetproject.lemon.generator,eu.monnetproject.lemon.generator.lela</Export-Package>
-                        <Private-Package>eu.monnetproject.lemon.generator.*,eu.monnetproject.lemon.stl.*,eu.monnetproject.stl.term.*</Private-Package>
+                        <Private-Package>eu.monnetproject.lemon.generator.*,eu.monnetproject.stl.*,eu.monnetproject.stl.term.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>

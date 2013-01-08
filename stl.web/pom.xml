@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>lemon.stl</artifactId>
+            <artifactId>lemon.generator.stl</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -30,7 +30,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>nlp.owlapi</artifactId>
+            <artifactId>ontology.owlapi</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>

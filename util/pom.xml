@@ -8,7 +8,7 @@
     <relativePath>..</relativePath>
   </parent>
 
-    <artifactId>util</artifactId>
+    <artifactId>lemon.generator.util</artifactId>
     <packaging>bundle</packaging>
 
     <name>eu.monnetproject.lemon.generator.util OSGi Bundle</name>

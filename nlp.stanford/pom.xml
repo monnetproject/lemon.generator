@@ -32,7 +32,7 @@
         </dependency>
         <dependency>
             <groupId>eu.monnetproject</groupId>
-            <artifactId>nlp.core</artifactId>
+            <artifactId>lemon.generator.nlp.core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -49,12 +49,6 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>framework.services</artifactId>
             <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>core</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

@@ -1,9 +1,5 @@
 package eu.monnetproject.stanford;
 
-import eu.monnetproject.osgi.OSGi;
-import eu.monnetproject.osgi.ServiceNotFoundException;
-import eu.monnetproject.osgi.ServiceRequest;
-import eu.monnetproject.osgi.embedded.EmbeddedOSGi;
 import eu.monnetproject.tokens.Token;
 import eu.monnetproject.tokenizer.Tokenizer;
 import eu.monnetproject.tokenizer.stanford.StanfordTokenizer;
