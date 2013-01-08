@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1322843558740 "http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#" >
+    <!ENTITY additional_provisions "http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additional_provisions," >
+    <!ENTITY additional_recognition "http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additional_recognition," >
+    <!ENTITY _investment_property "http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additions_from_acquisitions,_investment_property," >
+    <!ENTITY _provision_for_decommissioning "http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additional_provisions,_provision_for_decommissioning," >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl"
+     xmlns:Ontology1322843558740="http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:_investment_property="&Ontology1322843558740;additions_from_acquisitions,_investment_property,"
+     xmlns:additional_provisions="&Ontology1322843558740;additional_provisions,"
+     xmlns:additional_recognition="&Ontology1322843558740;additional_recognition,"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:_provision_for_decommissioning="&Ontology1322843558740;additional_provisions,_provision_for_decommissioning,">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additional_information -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;additional_information"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additional_provisions -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;additional_provisions"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additional_provisions,_legal_proceedings_provision -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;additional_provisions,_legal_proceedings_provision">
+        <rdfs:subClassOf rdf:resource="&Ontology1322843558740;additional_provisions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additional_provisions,_provision_for_decommissioning,_restoration_and_rehabilitation_costs -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;additional_provisions,_provision_for_decommissioning,_restoration_and_rehabilitation_costs">
+        <rdfs:subClassOf rdf:resource="&Ontology1322843558740;additional_provisions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additional_provisions,_restructuring_provision -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;additional_provisions,_restructuring_provision">
+        <rdfs:subClassOf rdf:resource="&Ontology1322843558740;additional_provisions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additional_provisions,_warranty_provision -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;additional_provisions,_warranty_provision">
+        <rdfs:subClassOf rdf:resource="&Ontology1322843558740;additional_provisions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additional_recognition,_goodwill -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;additional_recognition,_goodwill">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additions_from_acquisitions -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;additions_from_acquisitions"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#additions_from_acquisitions,_investment_property,_at_fair_value -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;additions_from_acquisitions,_investment_property,_at_fair_value">
+        <rdfs:subClassOf rdf:resource="&Ontology1322843558740;additions_from_acquisitions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#assets -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;assets"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#fixed_assets -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;fixed_assets">
+        <rdfs:subClassOf rdf:resource="&Ontology1322843558740;assets"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322843558740.owl#revaluation_of_fixed_assets -->
+
+    <owl:Class rdf:about="&Ontology1322843558740;revaluation_of_fixed_assets">
+        <rdfs:subClassOf rdf:resource="&Ontology1322843558740;fixed_assets"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
+

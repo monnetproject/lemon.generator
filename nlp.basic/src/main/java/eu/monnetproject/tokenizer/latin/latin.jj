@@ -1,0 +1,294 @@
+/* ====================================================================
+ * The Apache Software License, Version 1.1
+ *
+ * Copyright (c) 2001 The Apache Software Foundation.  All rights
+ * reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in
+ *    the documentation and/or other materials provided with the
+ *    distribution.
+ *
+ * 3. The end-user documentation included with the redistribution,
+ *    if any, must include the following acknowledgment:
+ *       "This product includes software developed by the
+ *        Apache Software Foundation (http://www.apache.org/)."
+ *    Alternately, this acknowledgment may appear in the software itself,
+ *    if and wherever such third-party acknowledgments normally appear.
+ *
+ * 4. The names "Apache" and "Apache Software Foundation" and
+ *    "Apache Lucene" must not be used to endorse or promote products
+ *    derived from this software without prior written permission. For
+ *    written permission, please contact apache@apache.org.
+ *
+ * 5. Products derived from this software may not be called "Apache",
+ *    "Apache Lucene", nor may "Apache" appear in their name, without
+ *    prior written permission of the Apache Software Foundation.
+ *
+ * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED.  IN NO EVENT SHALL THE APACHE SOFTWARE FOUNDATION OR
+ * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+ * USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+ * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ * ====================================================================
+ *
+ * This software consists of voluntary contributions made by many
+ * individuals on behalf of the Apache Software Foundation.  For more
+ * information on the Apache Software Foundation, please see
+ * <http://www.apache.org/>.
+ */
+
+options {
+  STATIC = false;
+//IGNORE_CASE = true;
+//BUILD_PARSER = false;
+  UNICODE_INPUT = true;
+  USER_CHAR_STREAM = true;
+  OPTIMIZE_TOKEN_MANAGER = true;
+//DEBUG_TOKEN_MANAGER = true;
+}
+PARSER_BEGIN(LatinTokenizerCC)
+
+package eu.monnetproject.tokenizer.latin;
+import eu.monnetproject.tokenizer.*;
+import java.io.*;
+
+/** A grammar-based tokenizer constructed with JavaCC.
+ * 
+ * <p> This should be a good tokenizer for most European-language documents.
+ *
+ * <p>Many applications have specific tokenizer needs.  If this tokenizer does
+ * not suit your application, please consider copying this source code
+ * directory to your project and maintaining your own grammar-based tokenizer.
+ */
+public class LatinTokenizerCC {
+
+	public LatinTokenizerCC(Reader reader) {
+		this(new FastCharStream(reader));
+	}
+}
+  
+PARSER_END(LatinTokenizerCC)
+
+TOKEN [IGNORE_CASE] : {					  // token patterns
+
+  // basic word: a sequence of digits & letters
+  <ALPHANUM: (<LETTER>|<DIGIT>)+ >
+
+  // internal apostrophes: O'Reilly, you're, O'Reilly's
+  // use a post-filter to remove possesives
+| <APOSTROPHE: <ALPHA> ("'" <ALPHA>)+ >
+
+  // acronyms: U.S.A., I.B.M., etc.
+  // use a post-filter to remove dots
+| <ACRONYM: <ALPHA> "." (<ALPHA> ".")+ >
+
+  // company names like AT&T and Excite@Home.
+| <COMPANY: <ALPHA> ("&"|"@") <ALPHA> >
+
+  // email addresses
+| <EMAIL: <ALPHANUM> (("."|"-"|"_") <ALPHANUM>)* "@" <ALPHANUM> (("."|"-") <ALPHANUM>)+ >
+
+  // hostname
+| <HOST: <ALPHANUM> ("." <ALPHANUM>)+ >
+
+  // floating point, serial, model numbers, ip addresses, etc.
+  // every other segment must have at least one digit
+| <NUM: (<ALPHANUM> <P> <HAS_DIGIT>
+       | <HAS_DIGIT> <P> <ALPHANUM>
+       | <ALPHANUM> (<P> <HAS_DIGIT> <P> <ALPHANUM>)+
+       | <HAS_DIGIT> (<P> <ALPHANUM> <P> <HAS_DIGIT>)+
+       | <ALPHANUM> <P> <HAS_DIGIT> (<P> <ALPHANUM> <P> <HAS_DIGIT>)+
+       | <HAS_DIGIT> <P> <ALPHANUM> (<P> <HAS_DIGIT> <P> <ALPHANUM>)+
+       | <HAS_DIGIT> "%"
+       | <HAS_DIGIT> <P> <HAS_DIGIT> "%"
+        )
+  >
+    
+| <PUNC: <P> >
+
+| <ABB: (<ABBREV> ".")+ >
+
+| <DIPL: "Dipl.-" ((<ALPHA>)+ ".")+ >
+
+| <#P: ("_"|"-"|"/"|"."|","|"\u058A"|"\u05BE"|"\u1400"|"\u1806"|"\u2010"|"\u2011"|
+"\u2012"|"\u2013"|"\u2014"|"\u2015"|"\u2E17"|"\u2E1A"|"\u2E3A"|"\u2E3B"|"\u301C"|
+"\u3030"|"\u30A0"|"\uFE31"|"\uFE32"|"\uFE58"|"\uFE63"|"\uFF0D"|"\u0029"|"\u005D"|
+"\u007D"|"\u0F3B"|"\u0F3D"|"\u169C"|"\u2046"|"\u207E"|"\u208E"|"\u232A"|"\u2769"|
+"\u276B"|"\u276D"|"\u276F"|"\u2771"|"\u2773"|"\u2775"|"\u27C6"|"\u27E7"|"\u27E9"|
+"\u27EB"|"\u27ED"|"\u27EF"|"\u2984"|"\u2986"|"\u2988"|"\u298A"|"\u298C"|"\u298E"|
+"\u2990"|"\u2992"|"\u2994"|"\u2996"|"\u2998"|"\u29D9"|"\u29DB"|"\u29FD"|"\u2E23"|
+"\u2E25"|"\u2E27"|"\u2E29"|"\u3009"|"\u300B"|"\u300D"|"\u300F"|"\u3011"|"\u3015"|
+"\u3017"|"\u3019"|"\u301B"|"\u301E"|"\u301F"|"\uFD3F"|"\uFE18"|"\uFE36"|"\uFE38"|
+"\uFE3A"|"\uFE3C"|"\uFE3E"|"\uFE40"|"\uFE42"|"\uFE44"|"\uFE48"|"\uFE5A"|"\uFE5C"|
+"\uFE5E"|"\uFF09"|"\uFF3D"|"\uFF5D"|"\uFF60"|"\uFF63"|"\u00BB"|"\u2019"|"\u201D"|
+"\u203A"|"\u2E03"|"\u2E05"|"\u2E0A"|"\u2E0D"|"\u2E1D"|"\u2E21"|"\u00AB"|"\u2018"|
+"\u201B"|"\u201C"|"\u201F"|"\u2039"|"\u2E02"|"\u2E04"|"\u2E09"|"\u2E0C"|"\u2E1C"|
+"\u2E20"|["!"-"/"]|
+"\u002E"|"\u002F"|"\u003A"|"\u003B"|"\u003F"|"\u0040"|"\\"|"\u00A1"|"\u00A7"|
+"\u00B6"|"\u00B7"|"\u00BF"|"\u037E"|"\u0387"|"\u055A"|"\u055B"|"\u055C"|"\u055D"|
+"\u055E"|"\u055F"|"\u0589"|"\u05C0"|"\u05C3"|"\u05C6"|"\u05F3"|"\u05F4"|"\u0609"|
+"\u060A"|"\u060C"|"\u060D"|"\u061B"|"\u061E"|"\u061F"|"\u066A"|"\u066B"|"\u066C"|
+"\u066D"|"\u06D4"|"\u0700"|"\u0701"|"\u0702"|"\u0703"|"\u0704"|"\u0705"|"\u0706"|
+"\u0707"|"\u0708"|"\u0709"|"\u070A"|"\u070B"|"\u070C"|"\u070D"|"\u07F7"|"\u07F8"|
+"\u07F9"|"\u0830"|"\u0831"|"\u0832"|"\u0833"|"\u0834"|"\u0835"|"\u0836"|"\u0837"|
+"\u0838"|"\u0839"|"\u083A"|"\u083B"|"\u083C"|"\u083D"|"\u083E"|"\u085E"|"\u0964"|
+"\u0965"|"\u0970"|"\u0AF0"|"\u0DF4"|"\u0E4F"|"\u0E5A"|"\u0E5B"|"\u0F04"|"\u0F05"|
+"\u0F06"|"\u0F07"|"\u0F08"|"\u0F09"|"\u0F0A"|"\u0F0B"|"\u0F0C"|"\u0F0D"|"\u0F0E"|
+"\u0F0F"|"\u0F10"|"\u0F11"|"\u0F12"|"\u0F14"|"\u0F85"|"\u0FD0"|"\u0FD1"|"\u0FD2"|
+"\u0FD3"|"\u0FD4"|"\u0FD9"|"\u0FDA"|"\u104A"|"\u104B"|"\u104C"|"\u104D"|"\u104E"|
+"\u104F"|"\u10FB"|"\u1360"|"\u1361"|"\u1362"|"\u1363"|"\u1364"|"\u1365"|"\u1366"|
+"\u1367"|"\u1368"|"\u166D"|"\u166E"|"\u16EB"|"\u16EC"|"\u16ED"|"\u1735"|"\u1736"|
+"\u17D4"|"\u17D5"|"\u17D6"|"\u17D8"|"\u17D9"|"\u17DA"|"\u1800"|"\u1801"|"\u1802"|
+"\u1803"|"\u1804"|"\u1805"|"\u1807"|"\u1808"|"\u1809"|"\u180A"|"\u1944"|"\u1945"|
+"\u1A1E"|"\u1A1F"|"\u1AA0"|"\u1AA1"|"\u1AA2"|"\u1AA3"|"\u1AA4"|"\u1AA5"|"\u1AA6"|
+"\u1AA8"|"\u1AA9"|"\u1AAA"|"\u1AAB"|"\u1AAC"|"\u1AAD"|"\u1B5A"|"\u1B5B"|"\u1B5C"|
+"\u1B5D"|"\u1B5E"|"\u1B5F"|"\u1B60"|"\u1BFC"|"\u1BFD"|"\u1BFE"|"\u1BFF"|"\u1C3B"|
+"\u1C3C"|"\u1C3D"|"\u1C3E"|"\u1C3F"|"\u1C7E"|"\u1C7F"|"\u1CC0"|"\u1CC1"|"\u1CC2"|
+"\u1CC3"|"\u1CC4"|"\u1CC5"|"\u1CC6"|"\u1CC7"|"\u1CD3"|"\u2016"|"\u2017"|"\u2020"|
+"\u2021"|"\u2022"|"\u2023"|"\u2024"|"\u2025"|"\u2026"|"\u2027"|"\u2030"|"\u2031"|
+"\u2032"|"\u2033"|"\u2034"|"\u2035"|"\u2036"|"\u2037"|"\u2038"|"\u203B"|"\u203C"|
+"\u203D"|"\u203E"|"\u2041"|"\u2042"|"\u2043"|"\u2047"|"\u2048"|"\u2049"|"\u204A"|
+"\u204B"|"\u204C"|"\u204D"|"\u204E"|"\u204F"|"\u2050"|"\u2051"|"\u2053"|"\u2055"|
+"\u2056"|"\u2057"|"\u2058"|"\u2059"|"\u205A"|"\u205B"|"\u205C"|"\u205D"|"\u205E"|
+"\u2CF9"|"\u2CFA"|"\u2CFB"|"\u2CFC"|"\u2CFE"|"\u2CFF"|"\u2D70"|"\u2E00"|"\u2E01"|
+"\u2E06"|"\u2E07"|"\u2E08"|"\u2E0B"|"\u2E0E"|"\u2E0F"|"\u2E10"|"\u2E11"|"\u2E12"|
+"\u2E13"|"\u2E14"|"\u2E15"|"\u2E16"|"\u2E18"|"\u2E19"|"\u2E1B"|"\u2E1E"|"\u2E1F"|
+"\u2E2A"|"\u2E2B"|"\u2E2C"|"\u2E2D"|"\u2E2E"|"\u2E30"|"\u2E31"|"\u2E32"|"\u2E33"|
+"\u2E34"|"\u2E35"|"\u2E36"|"\u2E37"|"\u2E38"|"\u2E39"|"\u3001"|"\u3002"|"\u3003"|
+"\u303D"|"\u30FB"|"\uA4FE"|"\uA4FF"|"\uA60D"|"\uA60E"|"\uA60F"|"\uA673"|"\uA67E"|
+"\uA6F2"|"\uA6F3"|"\uA6F4"|"\uA6F5"|"\uA6F6"|"\uA6F7"|"\uA874"|"\uA875"|"\uA876"|
+"\uA877"|"\uA8CE"|"\uA8CF"|"\uA8F8"|"\uA8F9"|"\uA8FA"|"\uA92E"|"\uA92F"|"\uA95F"|
+"\uA9C1"|"\uA9C2"|"\uA9C3"|"\uA9C4"|"\uA9C5"|"\uA9C6"|"\uA9C7"|"\uA9C8"|"\uA9C9"|
+"\uA9CA"|"\uA9CB"|"\uA9CC"|"\uA9CD"|"\uA9DE"|"\uA9DF"|"\uAA5C"|"\uAA5D"|"\uAA5E"|
+"\uAA5F"|"\uAADE"|"\uAADF"|"\uAAF0"|"\uAAF1"|"\uABEB"|"\uFE10"|"\uFE11"|"\uFE12"|
+"\uFE13"|"\uFE14"|"\uFE15"|"\uFE16"|"\uFE19"|"\uFE30"|"\uFE45"|"\uFE46"|"\uFE49"|
+"\uFE4A"|"\uFE4B"|"\uFE4C"|"\uFE50"|"\uFE51"|"\uFE52"|"\uFE54"|"\uFE55"|"\uFE56"|
+"\uFE57"|"\uFE5F"|"\uFE60"|"\uFE61"|"\uFE68"|"\uFE6A"|"\uFE6B"|"\uFF01"|"\uFF02"|
+"\uFF03"|"\uFF05"|"\uFF06"|"\uFF07"|"\uFF0A"|"\uFF0C"|"\uFF0E"|"\uFF0F"|"\uFF1A"|
+"\uFF1B"|"\uFF1F"|"\uFF20"|"\uFF3C"|"\uFF61"|"\uFF64"|"\uFF65"|"\u0028"|"\u005B"|
+"\u007B"|"\u0F3A"|"\u0F3C"|"\u169B"|"\u201A"|"\u201E"|"\u2045"|"\u207D"|"\u208D"|
+"\u2329"|"\u2768"|"\u276A"|"\u276C"|"\u276E"|"\u2770"|"\u2772"|"\u2774"|"\u27C5"|
+"\u27E6"|"\u27E8"|"\u27EA"|"\u27EC"|"\u27EE"|"\u2983"|"\u2985"|"\u2987"|"\u2989"|
+"\u298B"|"\u298D"|"\u298F"|"\u2991"|"\u2993"|"\u2995"|"\u2997"|"\u29D8"|"\u29DA"|
+"\u29FC"|"\u2E22"|"\u2E24"|"\u2E26"|"\u2E28"|"\u3008"|"\u300A"|"\u300C"|"\u300E"|
+"\u3010"|"\u3014"|"\u3016"|"\u3018"|"\u301A"|"\u301D"|"\uFD3E"|"\uFE17"|"\uFE35"|
+"\uFE37"|"\uFE39"|"\uFE3B"|"\uFE3D"|"\uFE3F"|"\uFE41"|"\uFE43"|"\uFE47"|"\uFE59"|
+"\uFE5B"|"\uFE5D"|"\uFF08"|"\uFF3B"|"\uFF5B"|"\uFF5F"|"\uFF62" ) >
+
+| <#HAS_DIGIT:					  // at least one digit
+    (<LETTER>|<DIGIT>)*
+    <DIGIT>
+    (<LETTER>|<DIGIT>)*
+  >
+
+| < #ALPHA: (<LETTER>)+>
+| < #LETTER:					  // unicode letters
+      [
+       "\u0041"-"\u005a",
+       "\u0061"-"\u007a",
+       "\u00c0"-"\u00d6",
+       "\u00d8"-"\u00f6",
+       "\u00f8"-"\u00ff",
+       "\u0100"-"\u1fff"
+      ]
+  >
+| < CJK:                                          // non-alphabets
+      [
+       "\u3040"-"\u318f",
+       "\u3300"-"\u337f",
+       "\u3400"-"\u3d2d",
+       "\u4e00"-"\u9fff",
+       "\uf900"-"\ufaff"
+      ]
+  >
+| < #DIGIT:					  // unicode digits
+      [
+       "\u0030"-"\u0039",
+       "\u0660"-"\u0669",
+       "\u06f0"-"\u06f9",
+       "\u0966"-"\u096f",
+       "\u09e6"-"\u09ef",
+       "\u0a66"-"\u0a6f",
+       "\u0ae6"-"\u0aef",
+       "\u0b66"-"\u0b6f",
+       "\u0be7"-"\u0bef",
+       "\u0c66"-"\u0c6f",
+       "\u0ce6"-"\u0cef",
+       "\u0d66"-"\u0d6f",
+       "\u0e50"-"\u0e59",
+       "\u0ed0"-"\u0ed9",
+       "\u1040"-"\u1049"
+      ]
+  >
+  | < #ABBREV: ( 
+  	    // English and General
+  	    "AG"|"APR"|"AUG"|"Adm"|"Brig"|"CO"|"CORP"|"Capt"|"Cmdr"|
+        "Co"|"Col"|"Comdr"|"DEC"|"DR"|"Dr"|"FEB"|"Fig"|"FRI"|"GMBH"|"Gen"|"Gov"|"INC"|
+        "JAN"|"JUL"|"JUN"|"LTD"|"Lt"|"Ltd"|"MAR"|"MON"|"MP"|"Maj"|"Mr"|"Mrs"|"Ms"|"NA"|
+        "NOV"|"NV"|"OCT"|"Oy"|"PLC"|"Prof"|"Rep"|"SA"|"SAT"|"SEP"|"SIR"|"SR"|"SUN"|"Sen"|
+        "Sgt"|"SpA"|"St"|"THU"|"THUR"|"TUE"|"VP"|"WED"|"ad"|"al"|"ed"|"eds"|"eg"|"et"|"etc"|
+        "fig"|"usu"|"vs"|"yr"|"yrs"|"Sc"|"Eng"|"Mus"|"Ed"|"B"|"LL"|"Dipl"|"M"|"F"|"A"|"btw"|"resp"|
+        "cf"|
+        // Spanish
+        "apdo"|"aprox"|"Av"|"Avda"|"Da"|"dna"|"Dra"|"esq"|"etc"|"Gob"|"Gral"|"Ing"|"Lic"|
+        "núm"|"pág"|"p.ej"|"Profa"|"Sr"|"Sra"|"Srta"|"Ud"|"Vd"|"Uds"|"Vds"|
+        // German
+        "Abb"|"Abf"| "Abk"|"Abs"|"Abt"|"abzgl"|"Adr"|"amtl"|"Anh"|"Bhf"|"bzgl"|"bzw"|"ehem"|
+        "eigtl"|"einschl"|"evtl"|"extl"|"geb"|"ggf"|"ggfs"|"Hbf"|"hpts"|"jhrl"|"mtl"|"MwSt"|
+        "MwST"|"näml"|"Str"|"tägl"|"usw"|"verh"|"verw"|"zzgl"|"Hr"|"jmd"|"jmdn"|"jmdm"|"jmds"|
+        // Dutch
+        "Hr"|"bijv"|"bijw"|"dwz"|"enz"|"evt"|"iem"|"vgl"|"versch"|"vnl"|"wrsch"|"ws"|"zgn"
+        ) >
+}
+
+SKIP : {					  // skip unrecognized chars
+ <NOISE: ~[] >
+}
+
+/** Returns the next token in the stream, or null at EOS.
+ * <p>The returned token's type is set to an element of {@link
+ * StandardTokenizerConstants#tokenImage}.
+ */
+public eu.monnetproject.tokens.Token next() throws IOException :
+{
+  Token token = null;
+}
+{
+  ( token = <ALPHANUM> |
+    token = <APOSTROPHE> |
+    token = <ACRONYM> |
+    token = <COMPANY> |
+    token = <EMAIL> |
+    token = <HOST> |
+    token = <NUM> |
+    token = <CJK> |
+    token = <PUNC> | 
+    token = <ABB> |
+    token = <DIPL> |
+    token = <EOF>
+   )
+    {
+      if (token.kind == EOF) {
+	return null;
+      } else {
+	return
+	  new SimpleToken(token.image);
+      }
+    }
+}
+

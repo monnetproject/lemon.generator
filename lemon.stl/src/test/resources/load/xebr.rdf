@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xebr="http://www.monnet-project.eu/xebr#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AssetsPresentation">
+		<skos:prefLabel xml:lang="en">Assets [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Assets</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FixedAssetsPresentation">
+		<skos:prefLabel xml:lang="en">Fixed assets [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Fixed assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#IntangibleFixedAssetsTotal">
+		<skos:prefLabel xml:lang="en">Intangible fixed assets [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Intangible fixed assets</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.monnet-project.eu/xebr#IntangibleFixedAssetsPresentation">
+				<skos:prefLabel xml:lang="en">Intangible fixed assets [Presentation]</skos:prefLabel>
+				<rdfs:label xml:lang="en">Intangible fixed assets</rdfs:label>
+				<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#FixedAssetsPresentation" />
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#TangibleFixedAssetsPresentation">
+		<skos:prefLabel xml:lang="en">Tangible fixed assets [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Tangible fixed assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#FixedAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#PropertyPlantAndEquipmentPresentation">
+		<skos:prefLabel xml:lang="en">Property, plant, and equipment [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Property, plant, and equipment</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#TangibleFixedAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#LandAndBuildings">
+		<skos:prefLabel xml:lang="en">Land and buildings</skos:prefLabel>
+		<rdfs:label xml:lang="en">Land and buildings</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#PropertyPlantAndEquipmentPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#PlantAndMachinery">
+		<skos:prefLabel xml:lang="en">Plant and machinery</skos:prefLabel>
+		<rdfs:label xml:lang="en">Plant and machinery</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#PropertyPlantAndEquipmentPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FurnitureFixturesAndEquipment">
+		<skos:prefLabel xml:lang="en">Furniture, fixtures, and equipment</skos:prefLabel>
+		<rdfs:label xml:lang="en">Furniture, fixtures, and equipment</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#PropertyPlantAndEquipmentPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OtherPropertyPlantAndEquipment">
+		<skos:prefLabel xml:lang="en">Other property, plant, and equipment</skos:prefLabel>
+		<rdfs:label xml:lang="en">Other property, plant, and equipment</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#PropertyPlantAndEquipmentPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#PropertyPlantAndEquipmentTotal">
+		<skos:prefLabel xml:lang="en">Property, plant, and equipment [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Property, plant, and equipment</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#PropertyPlantAndEquipmentPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OtherTangibleAssets">
+		<skos:prefLabel xml:lang="en">Other tangible assets</skos:prefLabel>
+		<rdfs:label xml:lang="en">Other tangible assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#TangibleFixedAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#TangibleFixedAssetsTotal">
+		<skos:prefLabel xml:lang="en">Tangible fixed assets [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Tangible fixed assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#TangibleFixedAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FinancialFixedAssetsPresentation">
+		<skos:prefLabel xml:lang="en">Financial fixed assets [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Financial fixed assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#FixedAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AffiliatedEnterprises">
+		<skos:prefLabel xml:lang="en">Affiliated enterprises</skos:prefLabel>
+		<rdfs:label xml:lang="en">Affiliated enterprises</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#FinancialFixedAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OtherFinancialAssets">
+		<skos:prefLabel xml:lang="en">Other financial assets</skos:prefLabel>
+		<rdfs:label xml:lang="en">Other financial assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#FinancialFixedAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FinancialFixedAssetsTotal">
+		<skos:prefLabel xml:lang="en">Financial fixed assets [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Financial fixed assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#FinancialFixedAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FixedAssetsTotal">
+		<skos:prefLabel xml:lang="en">Fixed assets [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Fixed assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#FixedAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#CurrentAssetsPresentation">
+		<skos:prefLabel xml:lang="en">Current assets [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Current assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AmountsReceivablePresentation">
+		<skos:prefLabel xml:lang="en">Amounts receivable [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Amounts receivable</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#CurrentAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AmountsReceivableAfterMoreThanOneYear">
+		<skos:prefLabel xml:lang="en">Amounts receivable after more than one year</skos:prefLabel>
+		<rdfs:label xml:lang="en">Amounts receivable after more than one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsReceivablePresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AmountsReceivableWithinOneYear">
+		<skos:prefLabel xml:lang="en">Amounts receivable within one year </skos:prefLabel>
+		<rdfs:label xml:lang="en">Amounts receivable within one year </rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsReceivablePresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AmountsReceivableTotal">
+		<skos:prefLabel xml:lang="en">Amounts receivable [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Amounts receivable</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsReceivablePresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#StocksPresentation">
+		<skos:prefLabel xml:lang="en">Stocks [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Stocks</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#CurrentAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#StockRawMaterialsAndConsumables">
+		<skos:prefLabel xml:lang="en">Stock Raw materials and consumables</skos:prefLabel>
+		<rdfs:label xml:lang="en">Stock Raw materials and consumables</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#StocksPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#WorkInProgress">
+		<skos:prefLabel xml:lang="en">Work in progress</skos:prefLabel>
+		<rdfs:label xml:lang="en">Work in progress</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#StocksPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OtherStock">
+		<skos:prefLabel xml:lang="en">Other stock</skos:prefLabel>
+		<rdfs:label xml:lang="en">Other stock</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#StocksPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#StocksTotal">
+		<skos:prefLabel xml:lang="en">Stocks [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Stocks</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#StocksPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#LiquidAssetsTotal">
+		<skos:prefLabel xml:lang="en">Liquid assets [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Liquid assets</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.monnet-project.eu/xebr#LiquidAssetsPresentation">
+				<skos:prefLabel xml:lang="en">Liquid assets [Presentation]</skos:prefLabel>
+				<rdfs:label xml:lang="en">Liquid assets</rdfs:label>
+				<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#CurrentAssetsPresentation" />
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#DeferredChargesAndAccruedIncomeTotal">
+		<skos:prefLabel xml:lang="en">Deferred charges and accrued income [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Deferred charges and accrued income</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.monnet-project.eu/xebr#DeferredChargesAndAccruedIncomePresentation">
+				<skos:prefLabel xml:lang="en">Deferred charges and accrued income [Presentation]</skos:prefLabel>
+				<rdfs:label xml:lang="en">Deferred charges and accrued income</rdfs:label>
+				<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#CurrentAssetsPresentation" />
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#CurrentAssetsTotal">
+		<skos:prefLabel xml:lang="en">Current assets [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Current assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#CurrentAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AssetsTotal">
+		<skos:prefLabel xml:lang="en">Assets [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#EquityAndLiabilitiesPresentation">
+		<skos:prefLabel xml:lang="en">Equity and Liabilities [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Equity and Liabilities</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#EquityPresentation">
+		<skos:prefLabel xml:lang="en">Equity [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Equity</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#EquityAndLiabilitiesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#Capital">
+		<skos:prefLabel xml:lang="en">Capital</skos:prefLabel>
+		<rdfs:label xml:lang="en">Capital</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#EquityPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#Reserves">
+		<skos:prefLabel xml:lang="en">Reserves</skos:prefLabel>
+		<rdfs:label xml:lang="en">Reserves</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#EquityPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#ProfitLossBroughtForward">
+		<skos:prefLabel xml:lang="en">Profit (loss) brought forward</skos:prefLabel>
+		<rdfs:label xml:lang="en">Profit (loss) brought forward</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#EquityPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#ProfitLossForThePeriod">
+		<skos:prefLabel xml:lang="en">Profit (loss) for the period</skos:prefLabel>
+		<rdfs:label xml:lang="en">Profit (loss) for the period</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#EquityPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#EquityTotal">
+		<skos:prefLabel xml:lang="en">Equity [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Equity</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#EquityPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#ProvisionsAndDeferredTaxesPresentation">
+		<skos:prefLabel xml:lang="en">Provisions and deferred taxes [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Provisions and deferred taxes</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#EquityAndLiabilitiesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#ProvisionsForLiabilitiesAndCharges">
+		<skos:prefLabel xml:lang="en">Provisions for liabilities and charges</skos:prefLabel>
+		<rdfs:label xml:lang="en">Provisions for liabilities and charges</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#ProvisionsAndDeferredTaxesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#DeferredTaxes">
+		<skos:prefLabel xml:lang="en">Deferred taxes</skos:prefLabel>
+		<rdfs:label xml:lang="en">Deferred taxes</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#ProvisionsAndDeferredTaxesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#ProvisionsAndDeferredTaxesTotal">
+		<skos:prefLabel xml:lang="en">Provisions and deferred taxes [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Provisions and deferred taxes</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#ProvisionsAndDeferredTaxesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AmountsPayablePresentation">
+		<skos:prefLabel xml:lang="en">Amounts payable [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Amounts payable</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#EquityAndLiabilitiesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AmountsPayableAfterMoreThanOneYearPresentation">
+		<skos:prefLabel xml:lang="en">Amounts payable after more than one year [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Amounts payable after more than one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayablePresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FinancialDebtsPayableAfterMoreThanOneYear">
+		<skos:prefLabel xml:lang="en">Financial debts payable after more than one year</skos:prefLabel>
+		<rdfs:label xml:lang="en">Financial debts payable after more than one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayableAfterMoreThanOneYearPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#TradeDebtsPayableAfterMoreThanOneYear">
+		<skos:prefLabel xml:lang="en">Trade debts payable after more than one year</skos:prefLabel>
+		<rdfs:label xml:lang="en">Trade debts payable after more than one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayableAfterMoreThanOneYearPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#TaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear">
+		<skos:prefLabel xml:lang="en">Taxes, remuneration, and social security payable after more than one year</skos:prefLabel>
+		<rdfs:label xml:lang="en">Taxes, remuneration, and social security payable after more than one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayableAfterMoreThanOneYearPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AmountsPayableAfterMoreThanOneYearTotal">
+		<skos:prefLabel xml:lang="en">Amounts payable after more than one year [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Amounts payable after more than one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayableAfterMoreThanOneYearPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AmountsPayableWithinOneYearPresentation">
+		<skos:prefLabel xml:lang="en">Amounts payable within one year [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Amounts payable within one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayablePresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FinancialDebtsPayableWithinOneYear">
+		<skos:prefLabel xml:lang="en">Financial debts payable within one year</skos:prefLabel>
+		<rdfs:label xml:lang="en">Financial debts payable within one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayableWithinOneYearPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#TradeDebtsPayableWithinOneYear">
+		<skos:prefLabel xml:lang="en">Trade debts payable within one year</skos:prefLabel>
+		<rdfs:label xml:lang="en">Trade debts payable within one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayableWithinOneYearPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#TaxesRemunerationAndSocialSecurityPayableWithinOneYear">
+		<skos:prefLabel xml:lang="en">Taxes, remuneration and social security payable within one year</skos:prefLabel>
+		<rdfs:label xml:lang="en">Taxes, remuneration and social security payable within one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayableWithinOneYearPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AmountsPayableWithinOneYearTotal">
+		<skos:prefLabel xml:lang="en">Amounts payable within one year [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Amounts payable within one year</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayableWithinOneYearPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AmountsPayableTotal">
+		<skos:prefLabel xml:lang="en">Amounts Payable [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Amounts Payable</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayablePresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AccruedChargesAndDeferredIncomeTotal">
+		<skos:prefLabel xml:lang="en">Accrued charges and deferred income [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Accrued charges and deferred income</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AccruedChargesAndDeferredIncomePresentation">
+				<skos:prefLabel xml:lang="en">Accrued charges and deferred income [Presentation]</skos:prefLabel>
+				<rdfs:label xml:lang="en">Accrued charges and deferred income</rdfs:label>
+				<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#AmountsPayablePresentation" />
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#EquityAndLiabilitiesTotal">
+		<skos:prefLabel xml:lang="en">Equity and Liabilities [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Equity and Liabilities</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#EquityAndLiabilitiesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#IncomeStatementPresentation">
+		<skos:prefLabel xml:lang="en">Income statement [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Income statement</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#NetOperatingIncomePresentation">
+		<skos:prefLabel xml:lang="en">Net operating income [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Net operating income</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#IncomeStatementPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OperatingIncomeTotal">
+		<skos:prefLabel xml:lang="en">Operating income [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Operating income</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OperatingIncomePresentation">
+				<skos:prefLabel xml:lang="en">Operating income [Presentation]</skos:prefLabel>
+				<rdfs:label xml:lang="en">Operating income</rdfs:label>
+				<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#NetOperatingIncomePresentation" />
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OperatingChargesPresentation">
+		<skos:prefLabel xml:lang="en">Operating charges [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Operating charges</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#NetOperatingIncomePresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#RawMaterialsAndConsumables">
+		<skos:prefLabel xml:lang="en">Raw materials and consumables</skos:prefLabel>
+		<rdfs:label xml:lang="en">Raw materials and consumables</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#OperatingChargesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#WagesAndSalaries">
+		<skos:prefLabel xml:lang="en">Wages and salaries</skos:prefLabel>
+		<rdfs:label xml:lang="en">Wages and salaries</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#OperatingChargesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#PensionsAndSimilarCommitments">
+		<skos:prefLabel xml:lang="en">Pensions and similar commitments</skos:prefLabel>
+		<rdfs:label xml:lang="en">Pensions and similar commitments</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#OperatingChargesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OtherOperatingCharges">
+		<skos:prefLabel xml:lang="en">Other operating charges</skos:prefLabel>
+		<rdfs:label xml:lang="en">Other operating charges</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#OperatingChargesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OperatingChargesTotal">
+		<skos:prefLabel xml:lang="en">Operating charges [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Operating charges</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#OperatingChargesPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OperatingProfitLossTotal">
+		<skos:prefLabel xml:lang="en">Operating profit (loss) [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Operating profit (loss)</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#NetOperatingIncomePresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#NetFinancialIncomePresentation">
+		<skos:prefLabel xml:lang="en">Net financial income [Presentation]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Net financial income</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#IncomeStatementPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FinancialIncomeTotal">
+		<skos:prefLabel xml:lang="en">Financial income [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Financial income</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FinancialIncomePresentation">
+				<skos:prefLabel xml:lang="en">Financial income [Presentation]</skos:prefLabel>
+				<rdfs:label xml:lang="en">Financial income</rdfs:label>
+				<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#NetFinancialIncomePresentation" />
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FinancialChargesTotal">
+		<skos:prefLabel xml:lang="en">Financial charges [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Financial charges</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FinancialChargesPresentation">
+				<skos:prefLabel xml:lang="en">Financial charges [Presentation]</skos:prefLabel>
+				<rdfs:label xml:lang="en">Financial charges</rdfs:label>
+				<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#NetFinancialIncomePresentation" />
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FinancialProfitLossTotal">
+		<skos:prefLabel xml:lang="en">Financial profit (loss) [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Financial profit (loss)</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#NetFinancialIncomePresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#ExtraordinaryIncomeTotal">
+		<skos:prefLabel xml:lang="en">Extraordinary income [Total]</skos:prefLabel>
+		<rdfs:label xml:lang="en">Extraordinary income</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.monnet-project.eu/xebr#ExtraordinaryIncomePresentation">
+				<skos:prefLabel xml:lang="en">Extraordinary income [Presentation]</skos:prefLabel>
+				<rdfs:label xml:lang="en">Extraordinary income</rdfs:label>
+				<rdfs:subClassOf>
+					<owl:Class rdf:about="http://www.monnet-project.eu/xebr#NetExtraordinaryIncomePresentation">
+						<skos:prefLabel xml:lang="en">Net extraordinary income [Presentation]</skos:prefLabel>
+						<rdfs:label xml:lang="en">Net extraordinary income</rdfs:label>
+						<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#IncomeStatementPresentation" />
+					</owl:Class>
+				</rdfs:subClassOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+</rdf:RDF>

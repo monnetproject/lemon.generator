@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xebr="http://www.monnet-project.eu/xebr#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#IntangibleFixedAssetsTotal">
+		<rdfs:label xml:lang="en">Intangible fixed assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/xebr#IntangibleFixedAssetsPresentation" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/xebr#OtherTangibleAssets">
+		<rdfs:label xml:lang="en">Other tangible assets</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.monnet-project.eu/xebr#TangibleFixedAssetsPresentation">
+				<rdfs:label xml:lang="en">Tangible fixed assets</rdfs:label>
+				<rdfs:subClassOf>
+					<owl:Class rdf:about="http://www.monnet-project.eu/xebr#FixedAssetsPresentation">
+						<rdfs:label xml:lang="en">Fixed assets</rdfs:label>
+						<rdfs:subClassOf>
+							<owl:Class rdf:about="http://www.monnet-project.eu/xebr#AssetsPresentation">
+								<rdfs:label xml:lang="en">Assets</rdfs:label>
+							</owl:Class>
+						</rdfs:subClassOf>
+					</owl:Class>
+				</rdfs:subClassOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+</rdf:RDF>

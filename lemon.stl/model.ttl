@@ -1,0 +1,2465 @@
+@prefix reviewstatus: <http://monnetproject.deri.ie/reviewstatus/>.
+@prefix wot: <http://xmlns.com/wot/0.1/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#>.
+@prefix wordnet: <http://xmlns.com/wordnet/1.6/>.
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfweb: <http://www.w3.org/2001/08/rdfweb/>.
+@prefix en: <http://monnetproject.deri.ie/lemonsource/patterns/en#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix contact: <http://www.w3.org/2000/10/swap/pim/contact#>.
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix lemon: <http://www.monnet-project.eu/lemon#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix node: <http://monnetproject.deri.ie/tags/penn/node/>.
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+
+<unknown:lexicon__en#SHA1+Sum+%28hex%29> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex381 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex380 ] ;
+  lemon:sense [ lemon:reference foaf:sha1 ;
+    lemon:subjOfProp _:node16bacblpex380 ,_:node16bacblpex381 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "SHA1 Sum (hex)"@en ] ;
+  lemon:decomposition ( _:node16bacblpex363
+    _:node16bacblpex365
+    _:node16bacblpex367
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex363 ] ;
+      lemon:constituent node:JJ ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex367 ] ;
+      lemon:constituent node:NNS ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex365 ] ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__en#current+project> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex345 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex344 ] ;
+  lemon:sense [ lemon:reference foaf:currentProject ;
+    lemon:subjOfProp _:node16bacblpex344 ,_:node16bacblpex345 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "current project"@en ] ;
+  lemon:decomposition ( _:node16bacblpex332
+    _:node16bacblpex334
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex334 ] ;
+      lemon:constituent node:NN ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex332 ] ;
+      lemon:constituent node:JJ ] ;
+    lemon:constituent node:NP ] .
+
+foaf:depicts rdfs:domain foaf:Image ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A thing depicted in this representation." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "zeigt"@de ,"depicts"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:OnlineChatAccount rdfs:subClassOf wordnet:OnlineAccount ;
+  vs:term_status "unstable" ;
+  rdf:type owl:Class ;
+  rdfs:comment "An online chat account." ;
+  rdfs:label "Online-Chat-Konto"@de ,"Online Chat Account"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__hu#DNA> lemon:form [ lemon:writtenRep "DNA"@hu ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:msnChatID rdfs:subPropertyOf foaf:nick ;
+  rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ,owl:InverseFunctionalProperty ;
+  rdfs:comment "An MSN chat ID" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "MSN chat ID"@en ,"MSN-Chat-ID"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+vs:term_status rdf:type owl:AnnotationProperty .
+
+foaf:accountServiceHomepage rdfs:domain foaf:OnlineAccount ;
+  vs:term_status "unstable" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Indicates a homepage of the service provide for this online account." ;
+  rdfs:range foaf:Document ;
+  rdfs:label "account service homepage"@en ,"Kontodienst-Homepage"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#service> lemon:canonicalForm [ lemon:writtenRep "service"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#URI> lemon:canonicalForm [ lemon:writtenRep "URI"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#work> lemon:canonicalForm [ lemon:writtenRep "work"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#MSN> lemon:canonicalForm [ lemon:writtenRep "MSN"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Vorname> lemon:sense [ lemon:reference foaf:firstName ] ,
+    [ lemon:reference foaf:givenname ] ;
+  lemon:form [ lemon:writtenRep "vorname"@de ] ;
+  lemon:canonicalForm [ lemon:writtenRep "vorname"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#Agent> lemon:sense [ lemon:reference foaf:Agent ] ;
+  lemon:canonicalForm [ lemon:writtenRep "agent"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex894 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#einer> lemon:canonicalForm [ lemon:writtenRep "einer"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#personal+mailbox> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex682 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex681 ] ;
+  lemon:sense [ lemon:reference foaf:mbox ;
+    lemon:subjOfProp _:node16bacblpex682 ,_:node16bacblpex681 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "personal mailbox"@en ] ;
+  lemon:decomposition ( _:node16bacblpex669
+    _:node16bacblpex671
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex669 ] ;
+      lemon:constituent node:JJ ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex671 ] ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] .
+
+foaf:holdsAccount rdfs:domain foaf:Agent ;
+  vs:term_status "unstable" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Indicates an account held by this agent." ;
+  rdfs:range foaf:OnlineAccount ;
+  rdfs:label "hält Konto"@de ,"holds account"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Fon> lemon:sense [ lemon:reference foaf:phone ] ;
+  lemon:canonicalForm [ lemon:writtenRep "fon"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:Image rdfs:subClassOf wordnet:Document ;
+  vs:term_status "testing" ;
+  rdf:type owl:Class ;
+  rdfs:comment "An image." ;
+  rdfs:label "Image"@en ,"Bild"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#member> lemon:sense [ lemon:reference foaf:member ] ;
+  lemon:canonicalForm [ lemon:writtenRep "member"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex863 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#Info> lemon:canonicalForm [ lemon:writtenRep "info"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#Organization> lemon:sense [ lemon:reference foaf:Organization ] ;
+  lemon:canonicalForm [ lemon:writtenRep "organization"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex358 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#Gaming> lemon:canonicalForm [ lemon:writtenRep "gaming"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#Nachname> lemon:sense [ lemon:reference foaf:surname ] ;
+  lemon:canonicalForm [ lemon:writtenRep "nachname"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#SHA1-Summe> lemon:canonicalForm [ lemon:writtenRep "SHA1-Summe"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#Group> lemon:sense [ lemon:reference foaf:Group ] ;
+  lemon:canonicalForm [ lemon:writtenRep "group"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex822 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#account+name> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex327 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex326 ] ;
+  lemon:sense [ lemon:reference foaf:accountName ;
+    lemon:subjOfProp _:node16bacblpex327 ,_:node16bacblpex326 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "account name"@en ] ;
+  lemon:decomposition ( _:node16bacblpex314
+    _:node16bacblpex316
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex316 ] ;
+      lemon:constituent node:NN ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex314 ] ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__en#ID> lemon:canonicalForm [ lemon:writtenRep "ID"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__hu#An+AIM+chat+ID> lemon:sense [ lemon:reference foaf:aimChatID ] ;
+  lemon:canonicalForm [ lemon:writtenRep "An AIM chat ID"@hu ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__hu#An> ]
+    [ lemon:element <unknown:lexicon__hu#AIM> ]
+    [ lemon:element <unknown:lexicon__hu#chat> ]
+    [ lemon:element <unknown:lexicon__hu#ID> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#Online+E-commerce+Account> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex955 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex954 ] ;
+  lemon:sense [ lemon:reference foaf:OnlineEcommerceAccount ;
+    lemon:subjOfProp _:node16bacblpex955 ,_:node16bacblpex954 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Online E-commerce Account"@en ] ;
+  lemon:decomposition ( _:node16bacblpex930
+    _:node16bacblpex932
+    _:node16bacblpex934
+    _:node16bacblpex936
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex934 ] ;
+        lemon:constituent node:NN ] ,
+        [ lemon:edge [ lemon:leaf _:node16bacblpex936 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ,
+      [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex930 ] ;
+        lemon:constituent node:JJ ] ,
+        [ lemon:edge [ lemon:leaf _:node16bacblpex932 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__en#class> lemon:canonicalForm [ lemon:writtenRep "class"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#gef%C3%B6rdert+von> lemon:sense [ lemon:reference foaf:fundedBy ] ;
+  lemon:canonicalForm [ lemon:writtenRep "gefördert von"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#gef%C3%B6rdert> ]
+    [ lemon:element <unknown:lexicon__de#von> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#commerce> lemon:canonicalForm [ lemon:writtenRep "commerce"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+foaf:jabberID rdfs:subPropertyOf foaf:nick ;
+  rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ,owl:InverseFunctionalProperty ;
+  rdfs:comment "A jabber ID for something." ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "jabber ID"@en ,"Jabber-ID"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:workplaceHomepage rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A workplace homepage of some person; the homepage of an organization they work for." ;
+  rdfs:range foaf:Document ;
+  rdfs:label "workplace homepage"@en ,"Arbeitsplatz-Homepage"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+dc:description rdf:type owl:AnnotationProperty .
+
+<unknown:lexicon__en#page> lemon:sense [ lemon:reference foaf:page ] ;
+  lemon:canonicalForm [ lemon:writtenRep "page"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex637 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#SHA1+sum+of+a+personal+mailbox+URI+name> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex140 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex139 ] ;
+  lemon:sense [ lemon:reference foaf:mbox_sha1sum ;
+    lemon:subjOfProp _:node16bacblpex139 ,_:node16bacblpex140 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "SHA1 sum of a personal mailbox URI name"@en ] ;
+  lemon:decomposition ( _:node16bacblpex92
+    _:node16bacblpex94
+    _:node16bacblpex96
+    _:node16bacblpex98
+    _:node16bacblpex100
+    _:node16bacblpex102
+    _:node16bacblpex104
+    _:node16bacblpex106
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex106 ] ;
+            lemon:constituent node:NN ] ,
+            [ lemon:edge [ lemon:leaf _:node16bacblpex100 ] ;
+            lemon:constituent node:JJ ] ,
+            [ lemon:edge [ lemon:leaf _:node16bacblpex104 ] ;
+            lemon:constituent node:NNP ] ,
+            [ lemon:edge [ lemon:leaf _:node16bacblpex98 ] ;
+            lemon:constituent node:DT ] ,
+            [ lemon:edge [ lemon:leaf _:node16bacblpex102 ] ;
+            lemon:constituent node:NNP ] ;
+          lemon:constituent node:NP ] ,
+          [ lemon:edge [ lemon:leaf _:node16bacblpex96 ] ;
+          lemon:constituent node:IN ] ;
+        lemon:constituent node:PP ] ,
+        [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex94 ] ;
+          lemon:constituent node:NN ] ;
+        lemon:constituent node:NP ] ;
+      lemon:constituent node:NP ] ,
+      [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex92 ] ;
+        lemon:constituent node:NNP ] ;
+      lemon:constituent node:NP ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__en#Online+Gaming+Account> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex489 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex488 ] ;
+  lemon:sense [ lemon:reference foaf:OnlineGamingAccount ;
+    lemon:subjOfProp _:node16bacblpex489 ,_:node16bacblpex488 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Online Gaming Account"@en ] ;
+  lemon:decomposition ( _:node16bacblpex469
+    _:node16bacblpex471
+    _:node16bacblpex473
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex471 ] ;
+        lemon:constituent node:NN ] ,
+        [ lemon:edge [ lemon:leaf _:node16bacblpex469 ] ;
+        lemon:constituent node:JJ ] ;
+      lemon:constituent node:NP ] ,
+      [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex473 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__en#homepage> lemon:sense [ lemon:reference foaf:homepage ] ;
+  lemon:canonicalForm [ lemon:writtenRep "homepage"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex393 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+foaf:surname rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The surname of some person." ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "Nachname"@de ,"Surname"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+lexinfo:copulativeArg rdfs:subPropertyOf lemon:synArg .
+
+<unknown:lexicon__de#Schule-Homepage> lemon:sense [ lemon:reference foaf:schoolHomepage ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Schule-Homepage"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#Schule> ]
+    [ lemon:element <unknown:lexicon__de#Homepage> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Thema> lemon:sense [ lemon:reference foaf:topic ] ,
+    [ lemon:reference foaf:theme ] ;
+  lemon:form [ lemon:writtenRep "thema"@de ] ;
+  lemon:canonicalForm [ lemon:writtenRep "thema"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:theme rdfs:domain rdfs:Resource ;
+  vs:term_status "unstable" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A theme." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "theme"@en ,"Thema"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__hu#DNA+checksum> lemon:sense [ lemon:reference foaf:dnaChecksum ] ;
+  lemon:canonicalForm [ lemon:writtenRep "DNA checksum"@hu ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__hu#DNA> ]
+    [ lemon:element <unknown:lexicon__hu#checksum> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Online> lemon:canonicalForm [ lemon:writtenRep "online"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Hersteller> lemon:sense [ lemon:reference foaf:maker ] ;
+  lemon:canonicalForm [ lemon:writtenRep "hersteller"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:yahooChatID rdfs:subPropertyOf foaf:nick ;
+  rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ,owl:InverseFunctionalProperty ;
+  rdfs:comment "A Yahoo chat ID" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "Yahoo chat ID"@en ,"Yahoo-Chat-ID"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#lexicon> rdf:type lemon:Lexicon ;
+  lemon:entry <unknown:lexicon__de#Commerce> ,<unknown:lexicon__de#Kontoname> ,<unknown:lexicon__de#Seite> ,
+    <unknown:lexicon__de#in> ,<unknown:lexicon__de#aktuelle+Projekt> ,<unknown:lexicon__de#Geschlecht> ,
+    <unknown:lexicon__de#einer> ,<unknown:lexicon__de#Schule> ,<unknown:lexicon__de#Gruppe> ,
+    <unknown:lexicon__de#ICQ-Chat-ID> ,<unknown:lexicon__de#Jabber-ID> ,<unknown:lexicon__de#Ver%C3%B6ffentlichungen> ,
+    <unknown:lexicon__de#Arbeitsplatz> ,<unknown:lexicon__de#SHA1-Summe+von+einer+pers%C3%B6nlichen+Mailbox-URI-Name> ,<unknown:lexicon__de#Checksum> ,
+    <unknown:lexicon__de#Logo> ,<unknown:lexicon__de#Fon> ,<unknown:lexicon__de#Projekt> ,
+    <unknown:lexicon__de#Briggs> ,<unknown:lexicon__de#kennt> ,<unknown:lexicon__de#Jabber> ,
+    <unknown:lexicon__de#Bild> ,<unknown:lexicon__de#Konto> ,<unknown:lexicon__de#Mailbox> ,
+    <unknown:lexicon__de#Yahoo> ,<unknown:lexicon__de#Tipjar> ,<unknown:lexicon__de#Homepage> ,
+    <unknown:lexicon__de#N%C3%A4he> ,<unknown:lexicon__de#h%C3%A4lt> ,<unknown:lexicon__de#ICQ> ,
+    <unknown:lexicon__de#Darstellung> ,<unknown:lexicon__de#Kontodienst> ,<unknown:lexicon__de#Online-Gaming-Konto> ,
+    <unknown:lexicon__de#Info> ,<unknown:lexicon__de#Profildatei> ,<unknown:lexicon__de#Online-E-Commerce-Konto> ,
+    <unknown:lexicon__de#Geekcode> ,<unknown:lexicon__de#DNA-Checksum> ,<unknown:lexicon__de#Arbeitsplatz-Homepage> ,
+    <unknown:lexicon__de#Weblog> ,<unknown:lexicon__de#vorheriges+Projekt> ,<unknown:lexicon__de#Yahoo-Chat-ID> ,
+    <unknown:lexicon__de#Nachname> ,<unknown:lexicon__de#Myers-Briggs> ,<unknown:lexicon__de#ID> ,
+    <unknown:lexicon__de#Agent> ,<unknown:lexicon__de#Schule-Homepage> ,<unknown:lexicon__de#SHA1-Summe> ,
+    <unknown:lexicon__de#Thema> ,<unknown:lexicon__de#vorheriges> ,<unknown:lexicon__de#der> ,
+    <unknown:lexicon__de#Arbeit-Info-Homepage> ,<unknown:lexicon__de#h%C3%A4lt+Konto> ,<unknown:lexicon__de#pers%C3%B6nliche+Mailbox> ,
+    <unknown:lexicon__de#Online> ,<unknown:lexicon__de#zeigt> ,<unknown:lexicon__de#Mitgliedschaftsklasse> ,
+    <unknown:lexicon__de#Arbeit> ,<unknown:lexicon__de#gef%C3%B6rdert> ,<unknown:lexicon__de#Hersteller> ,
+    <unknown:lexicon__de#Chat> ,<unknown:lexicon__de#Kontodienst-Homepage> ,<unknown:lexicon__de#basiert> ,
+    <unknown:lexicon__de#Datei> ,<unknown:lexicon__de#Hauptthema> ,<unknown:lexicon__de#basiert+in+der+N%C3%A4he+von> ,
+    <unknown:lexicon__de#pers%C3%B6nliche> ,<unknown:lexicon__de#Hex> ,<unknown:lexicon__de#von> ,
+    <unknown:lexicon__de#Spitzname> ,<unknown:lexicon__de#Familienname> ,<unknown:lexicon__de#Orginisation> ,
+    <unknown:lexicon__de#Gaming> ,<unknown:lexicon__de#pers%C3%B6nliche+Profildatei> ,<unknown:lexicon__de#DNA> ,
+    <unknown:lexicon__de#Bezeichnung> ,<unknown:lexicon__de#SHA1-Summe+%28Hex%29> ,<unknown:lexicon__de#aktuelle> ,
+    <unknown:lexicon__de#Mitglied> ,<unknown:lexicon__de#Interesse> ,<unknown:lexicon__de#E> ,
+    <unknown:lexicon__de#Person> ,<unknown:lexicon__de#MSN-Chat-ID> ,<unknown:lexicon__de#Myers> ,
+    <unknown:lexicon__de#URI> ,<unknown:lexicon__de#Interessethema> ,<unknown:lexicon__de#MSN> ,
+    <unknown:lexicon__de#Online-Chat-Konto> ,<unknown:lexicon__de#gemacht> ,<unknown:lexicon__de#pers%C3%B6nlichen> ,
+    <unknown:lexicon__de#Name> ,<unknown:lexicon__de#Vorname> ,<unknown:lexicon__de#gef%C3%B6rdert+von> ,
+    <unknown:lexicon__de#Plan> ;
+  lemon:language "de" .
+
+<unknown:lexicon__de#Familienname> lemon:sense [ lemon:reference foaf:family_name ] ;
+  lemon:canonicalForm [ lemon:writtenRep "familienname"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#pers%C3%B6nliche+Profildatei> lemon:sense [ lemon:reference foaf:PersonalProfileDocument ] ;
+  lemon:canonicalForm [ lemon:writtenRep "persönliche Profildatei"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#pers%C3%B6nliche> ]
+    [ lemon:element <unknown:lexicon__de#Profildatei> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#SHA1__1> lemon:canonicalForm [ lemon:writtenRep "SHA1"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Person> lemon:sense [ lemon:reference foaf:Person ] ;
+  lemon:canonicalForm [ lemon:writtenRep "person"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:accountName rdfs:domain foaf:OnlineAccount ;
+  vs:term_status "unstable" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Indicates the name (identifier) associated with this online account." ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "Kontoname"@de ,"account name"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Myers> lemon:canonicalForm [ lemon:writtenRep "myers"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Online-Chat-Konto> lemon:sense [ lemon:reference foaf:OnlineChatAccount ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Online-Chat-Konto"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#Online> ]
+    [ lemon:element <unknown:lexicon__de#Chat> ]
+    [ lemon:element <unknown:lexicon__de#Konto> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:tipjar rdfs:subPropertyOf foaf:page ;
+  rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A tipjar document for this agent, describing means for payment and reward." ;
+  rdfs:range foaf:Document ;
+  rdfs:label "Tipjar"@de ,"tipjar"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+lexinfo:tense rdfs:subPropertyOf lemon:property .
+
+<unknown:lexicon__de#in> lemon:canonicalForm [ lemon:writtenRep "in"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Geschlecht> lemon:sense [ lemon:reference foaf:gender ] ;
+  lemon:canonicalForm [ lemon:writtenRep "geschlecht"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#account> lemon:canonicalForm [ lemon:writtenRep "account"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+foaf:topic rdfs:domain foaf:Document ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A topic of some page or document." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "topic"@en ,"Thema"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
+  owl:inverseOf foaf:page .
+
+<unknown:lexicon__de#Projekt> lemon:sense [ lemon:reference foaf:Project ] ;
+  lemon:form [ lemon:writtenRep "projekt"@de ] ;
+  lemon:canonicalForm [ lemon:writtenRep "projekt"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#membership+class> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex997 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex996 ] ;
+  lemon:sense [ lemon:reference foaf:membershipClass ;
+    lemon:subjOfProp _:node16bacblpex996 ,_:node16bacblpex997 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "membership class"@en ] ;
+  lemon:decomposition ( _:node16bacblpex984
+    _:node16bacblpex986
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex986 ] ;
+      lemon:constituent node:NN ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex984 ] ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] .
+
+foaf:weblog rdfs:subPropertyOf foaf:page ;
+  rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ,owl:InverseFunctionalProperty ;
+  rdfs:comment "A weblog of some thing (whether person, group, company etc.)." ;
+  rdfs:range foaf:Document ;
+  rdfs:label "Weblog"@de ,"weblog"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:OnlineGamingAccount rdfs:subClassOf wordnet:OnlineAccount ;
+  vs:term_status "unstable" ;
+  rdf:type owl:Class ;
+  rdfs:comment "An online gaming account." ;
+  rdfs:label "Online-Gaming-Konto"@de ,"Online Gaming Account"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Homepage> lemon:sense [ lemon:reference foaf:homepage ] ;
+  lemon:form [ lemon:writtenRep "homepage"@de ] ;
+  lemon:canonicalForm [ lemon:writtenRep "homepage"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#Given> lemon:canonicalForm [ lemon:writtenRep "give"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "given"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:regularVerb .
+
+foaf:member rdfs:domain foaf:Group ;
+  vs:term_status "unstable" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Indicates a member of a Group" ;
+  rdfs:range foaf:Agent ;
+  rdfs:label "member"@en ,"Mitglied"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#Document> lemon:sense [ lemon:reference foaf:Document ] ;
+  lemon:canonicalForm [ lemon:writtenRep "document"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex695 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#Bezeichnung> lemon:sense [ lemon:reference foaf:title ] ;
+  lemon:canonicalForm [ lemon:writtenRep "bezeichnung"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:publications rdfs:domain foaf:Person ;
+  vs:term_status "unstable" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A link to the publications of this person." ;
+  rdfs:range foaf:Document ;
+  rdfs:label "publications"@en ,"Veröffentlichungen"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#E> lemon:canonicalForm [ lemon:writtenRep "E"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__hu#Account> lemon:form [ lemon:writtenRep "account"@hu ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Schule> lemon:canonicalForm [ lemon:writtenRep "schule"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Checksum> lemon:canonicalForm [ lemon:writtenRep "checksum"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#project> lemon:sense [ lemon:reference foaf:Project ] ;
+  lemon:canonicalForm [ lemon:writtenRep "project"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex773 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#school+homepage> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex456 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex455 ] ;
+  lemon:sense [ lemon:reference foaf:schoolHomepage ;
+    lemon:subjOfProp _:node16bacblpex456 ,_:node16bacblpex455 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "school homepage"@en ] ;
+  lemon:decomposition ( _:node16bacblpex443
+    _:node16bacblpex445
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex443 ] ;
+      lemon:constituent node:NN ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex445 ] ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__hu#ID> lemon:form [ lemon:writtenRep "ID"@hu ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#hex> lemon:canonicalForm [ lemon:writtenRep "hex"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+foaf:sha1 rdfs:domain foaf:Document ;
+  vs:term_status "unstable" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A sha1sum hash, in hex." ;
+  rdfs:label "SHA1 Sum (hex)"@en ,"SHA1-Summe (Hex)"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:Organization owl:disjointWith foaf:Person ;
+  rdfs:subClassOf foaf:Agent ,wordnet:Organization ;
+  vs:term_status "unstable" ;
+  rdf:type owl:Class ;
+  rdfs:comment "An organization." ;
+  rdfs:label "Orginisation"@de ,"Organization"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+en:regularVerb lemon:transform [ lemon:rule "~(?<=s|o|sh)/~es" ,"~(?<!s|o|sh)/~s" ;
+    lemon:generates [ lexinfo:tense lexinfo:present ;
+      lexinfo:verbFormMood lexinfo:indicative ;
+      lexinfo:person lexinfo:thirdPerson ;
+      lexinfo:number lexinfo:plural ] ] ,
+    [ lemon:rule "~(?<=e)/~d" ,"~(?<!e)/~ed" ;
+    lemon:generates [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:participle ] ,
+      [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:indicative ] ] ;
+  rdf:type lemon:MorphPattern ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+<unknown:lexicon__en#Given+name> lemon:sense [ lemon:reference foaf:givenname ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Given name"@en ] ;
+  lemon:decomposition ( _:node16bacblpex405
+    _:node16bacblpex407
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex405 ] ;
+      lemon:constituent node:VBN ] ,
+      [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex407 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ;
+    lemon:constituent node:PP ] .
+
+<unknown:lexicon__en#Chat> lemon:canonicalForm [ lemon:writtenRep "chat"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#workplace+homepage> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex296 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex295 ] ;
+  lemon:sense [ lemon:reference foaf:workplaceHomepage ;
+    lemon:subjOfProp _:node16bacblpex296 ,_:node16bacblpex295 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "workplace homepage"@en ] ;
+  lemon:decomposition ( _:node16bacblpex283
+    _:node16bacblpex285
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex285 ] ;
+      lemon:constituent node:NN ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex283 ] ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] .
+
+foaf:membershipClass rdfs:domain foaf:Group ;
+  vs:term_status "unstable" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Indicates the class of individuals that are a member of a Group" ;
+  rdfs:range rdfs:Class ;
+  rdfs:label "Mitgliedschaftsklasse"@de ,"membership class"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Hauptthema> lemon:sense [ lemon:reference foaf:primaryTopic ] ;
+  lemon:canonicalForm [ lemon:writtenRep "hauptthema"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:phone vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel)." ;
+  rdfs:label "phone"@en ,"Fon"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:Person owl:disjointWith foaf:Project ;
+  rdfs:subClassOf foaf:Agent ,wgs84_pos:SpatialThing ,wordnet:Person ,
+    contact:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:Class ;
+  rdfs:comment "A person." ;
+  rdfs:label "Person"@en ,"Person"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#workplace> lemon:canonicalForm [ lemon:writtenRep "workplace"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#title> lemon:sense [ lemon:reference foaf:title ] ,
+    [ lemon:reference dc:title ] ;
+  lemon:canonicalForm [ lemon:writtenRep "title"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex167 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+foaf:schoolHomepage rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A homepage of a school attended by the person." ;
+  rdfs:range foaf:Document ;
+  rdfs:label "Schule-Homepage"@de ,"school homepage"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:based_near rdfs:domain wgs84_pos:SpatialThing ;
+  vs:term_status "unstable" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A location that something is based near, for some broadly human notion of near." ;
+  rdfs:range wgs84_pos:SpatialThing ;
+  rdfs:label "based near"@en ,"basiert in der Nähe von"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:depiction rdfs:domain rdfs:Resource ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A depiction of some thing." ;
+  rdfs:range foaf:Image ;
+  rdfs:label "Darstellung"@de ,"depiction"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
+  owl:inverseOf foaf:depicts .
+
+<unknown:lexicon__en#Yahoo> lemon:canonicalForm [ lemon:writtenRep "yahoo"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#weblog> lemon:sense [ lemon:reference foaf:weblog ] ;
+  lemon:canonicalForm [ lemon:writtenRep "weblog"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex1065 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__fr#lexicon> rdf:type lemon:Lexicon ;
+  lemon:entry <unknown:lexicon__fr#description> ;
+  lemon:language "fr" .
+
+foaf:made rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Something that was made by this agent." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "made"@en ,"gemacht"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
+  owl:inverseOf foaf:maker .
+
+<unknown:lexicon__de#Logo> lemon:sense [ lemon:reference foaf:logo ] ;
+  lemon:canonicalForm [ lemon:writtenRep "logo"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:homepage rdfs:subPropertyOf foaf:page ;
+  rdfs:domain foaf:Agent ;
+  vs:term_status "stable" ;
+  rdf:type owl:ObjectProperty ,owl:InverseFunctionalProperty ;
+  rdfs:comment "A homepage for some thing." ;
+  rdfs:range foaf:Document ;
+  rdfs:label "Homepage"@de ,"homepage"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#holds> lemon:canonicalForm [ lemon:writtenRep "hold"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "holds"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:regularVerb .
+
+<unknown:lexicon__de#vorheriges+Projekt> lemon:sense [ lemon:reference foaf:pastProject ] ;
+  lemon:canonicalForm [ lemon:writtenRep "vorheriges Projekt"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#vorheriges> ]
+    [ lemon:element <unknown:lexicon__de#Projekt> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#school> lemon:canonicalForm [ lemon:writtenRep "school"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#near> lemon:canonicalForm [ lemon:writtenRep "near"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#Online+Chat+Account> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex847 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex846 ] ;
+  lemon:sense [ lemon:reference foaf:OnlineChatAccount ;
+    lemon:subjOfProp _:node16bacblpex847 ,_:node16bacblpex846 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Online Chat Account"@en ] ;
+  lemon:decomposition ( _:node16bacblpex827
+    _:node16bacblpex829
+    _:node16bacblpex831
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex831 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ,
+      [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex829 ] ;
+        lemon:constituent node:NNS ] ,
+        [ lemon:edge [ lemon:leaf _:node16bacblpex827 ] ;
+        lemon:constituent node:JJ ] ;
+      lemon:constituent node:NP ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__en#AIM> lemon:canonicalForm [ lemon:writtenRep "AIM"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#work+info+homepage> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex806 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex805 ] ;
+  lemon:sense [ lemon:reference foaf:workInfoHomepage ;
+    lemon:subjOfProp _:node16bacblpex806 ,_:node16bacblpex805 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "work info homepage"@en ] ;
+  lemon:decomposition ( _:node16bacblpex786
+    _:node16bacblpex788
+    _:node16bacblpex790
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex786 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ,
+      [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex790 ] ;
+        lemon:constituent node:NN ] ,
+        [ lemon:edge [ lemon:leaf _:node16bacblpex788 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__en#holds+account> lemon:sense [ lemon:reference foaf:holdsAccount ] ;
+  lemon:canonicalForm [ lemon:writtenRep "holds account"@en ] ;
+  lemon:decomposition ( _:node16bacblpex29
+    _:node16bacblpex31
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex31 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ,
+      [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex29 ] ;
+        lemon:constituent node:VBZ ] ;
+      lemon:constituent node:VP ] ;
+    lemon:constituent node:SINV ] .
+
+<unknown:lexicon__de#Gruppe> lemon:sense [ lemon:reference foaf:Group ] ;
+  lemon:canonicalForm [ lemon:writtenRep "gruppe"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#a> lemon:canonicalForm [ lemon:writtenRep "a"@en ] ;
+  lexinfo:partOfSpeech lexinfo:determiner ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__hu#An> lemon:form [ lemon:writtenRep "an"@hu ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__hu#checksum> lemon:form [ lemon:writtenRep "checksum"@hu ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Arbeitsplatz-Homepage> lemon:sense [ lemon:reference foaf:workplaceHomepage ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Arbeitsplatz-Homepage"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#Arbeitsplatz> ]
+    [ lemon:element <unknown:lexicon__de#Homepage> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Weblog> lemon:sense [ lemon:reference foaf:weblog ] ;
+  lemon:canonicalForm [ lemon:writtenRep "weblog"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#Yahoo+chat+ID> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex78 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex77 ] ;
+  lemon:sense [ lemon:reference foaf:yahooChatID ;
+    lemon:subjOfProp _:node16bacblpex78 ,_:node16bacblpex77 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Yahoo chat ID"@en ] ;
+  lemon:decomposition ( _:node16bacblpex60
+    _:node16bacblpex62
+    _:node16bacblpex64
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex64 ] ;
+      lemon:constituent node:NNP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex62 ] ;
+      lemon:constituent node:NNP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex60 ] ;
+      lemon:constituent node:NNP ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__en#E> lemon:canonicalForm [ lemon:writtenRep "E"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#personal> lemon:canonicalForm [ lemon:writtenRep "personal"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#basiert> lemon:canonicalForm [ lemon:writtenRep "basiert"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#basiert+in+der+N%C3%A4he+von> lemon:sense [ lemon:reference foaf:based_near ] ;
+  lemon:canonicalForm [ lemon:writtenRep "basiert in der Nähe von"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#basiert> ]
+    [ lemon:element <unknown:lexicon__de#in> ]
+    [ lemon:element <unknown:lexicon__de#der> ]
+    [ lemon:element <unknown:lexicon__de#N%C3%A4he> ]
+    [ lemon:element <unknown:lexicon__de#von> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:PersonalProfileDocument rdfs:subClassOf foaf:Document ;
+  vs:term_status "testing" ;
+  rdf:type owl:Class ;
+  rdfs:comment "A personal profile RDF document." ;
+  rdfs:label "personal profile document"@en ,"persönliche Profildatei"@de .
+
+<unknown:lexicon__en#first> lemon:canonicalForm [ lemon:writtenRep "first"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Orginisation> lemon:sense [ lemon:reference foaf:Organization ] ;
+  lemon:canonicalForm [ lemon:writtenRep "orginisation"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Plan> lemon:sense [ lemon:reference foaf:plan ] ;
+  lemon:canonicalForm [ lemon:writtenRep "plan"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Commerce> lemon:canonicalForm [ lemon:writtenRep "commerce"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__hu#term> lemon:form [ lemon:writtenRep "term"@hu ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#first+name> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex655 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex654 ] ;
+  lemon:sense [ lemon:reference foaf:firstName ;
+    lemon:subjOfProp _:node16bacblpex654 ,_:node16bacblpex655 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "first name"@en ] ;
+  lemon:decomposition ( _:node16bacblpex642
+    _:node16bacblpex644
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex644 ] ;
+      lemon:constituent node:NN ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex642 ] ;
+      lemon:constituent node:JJ ] ;
+    lemon:constituent node:NP ] .
+
+foaf:currentProject rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A current project this person works on." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "aktuelle Projekt"@de ,"current project"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#kennt> lemon:sense [ lemon:reference foaf:knows ] ;
+  lemon:canonicalForm [ lemon:writtenRep "kennt"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#Person> lemon:sense [ lemon:reference foaf:Person ] ;
+  lemon:canonicalForm [ lemon:writtenRep "person"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex733 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#Profildatei> lemon:canonicalForm [ lemon:writtenRep "profildatei"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#logo> lemon:sense [ lemon:reference foaf:logo ] ;
+  lemon:canonicalForm [ lemon:writtenRep "logo"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex568 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+foaf:Project rdfs:subClassOf wordnet:Project ;
+  vs:term_status "unstable" ;
+  rdf:type owl:Class ;
+  rdfs:comment "A project (a collective endeavour of some kind)." ;
+  rdfs:label "Projekt"@de ,"Project"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Yahoo-Chat-ID> lemon:sense [ lemon:reference foaf:yahooChatID ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Yahoo-Chat-ID"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#Yahoo> ]
+    [ lemon:element <unknown:lexicon__de#Chat> ]
+    [ lemon:element <unknown:lexicon__de#ID> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Arbeit-Info-Homepage> lemon:sense [ lemon:reference foaf:workInfoHomepage ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Arbeit-Info-Homepage"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#Arbeit> ]
+    [ lemon:element <unknown:lexicon__de#Info> ]
+    [ lemon:element <unknown:lexicon__de#Homepage> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+lexinfo:verbFormMood rdfs:subPropertyOf lemon:property .
+
+<unknown:lexicon__de#Datei> lemon:sense [ lemon:reference foaf:Document ] ;
+  lemon:canonicalForm [ lemon:writtenRep "datei"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#mailbox> lemon:canonicalForm [ lemon:writtenRep "mailbox"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#DNA> lemon:canonicalForm [ lemon:writtenRep "DNA"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#aktuelle> lemon:canonicalForm [ lemon:writtenRep "aktuelle"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+lexinfo:possesiveAdjunct rdfs:subPropertyOf lemon:synArg .
+
+<unknown:lexicon__hu#lexicon> rdf:type lemon:Lexicon ;
+  lemon:entry <unknown:lexicon__hu#term> ,<unknown:lexicon__hu#term+status> ,<unknown:lexicon__hu#An+AIM+chat+ID> ,
+    <unknown:lexicon__hu#AIM> ,<unknown:lexicon__hu#Account> ,<unknown:lexicon__hu#chat> ,
+    <unknown:lexicon__hu#DNA+checksum> ,<unknown:lexicon__hu#Online+Account> ,<unknown:lexicon__hu#checksum> ,
+    <unknown:lexicon__hu#An> ,<unknown:lexicon__hu#ID> ,<unknown:lexicon__hu#DNA> ,
+    <unknown:lexicon__hu#status> ,<unknown:lexicon__hu#Online> ;
+  lemon:language "hu" .
+
+<unknown:lexicon__de#Name> lemon:sense [ lemon:reference foaf:name ] ;
+  lemon:form [ lemon:writtenRep "name"@de ] ;
+  lemon:canonicalForm [ lemon:writtenRep "name"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:myersBriggs rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "A Myers Briggs (MBTI) personality classification." ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "Myers-Briggs"@de ,"Myers Briggs"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#ICQ-Chat-ID> lemon:sense [ lemon:reference foaf:icqChatID ] ;
+  lemon:canonicalForm [ lemon:writtenRep "ICQ-Chat-ID"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#ICQ> ]
+    [ lemon:element <unknown:lexicon__de#Chat> ]
+    [ lemon:element <unknown:lexicon__de#ID> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#current> lemon:canonicalForm [ lemon:writtenRep "current"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#theme> lemon:sense [ lemon:reference foaf:theme ] ;
+  lemon:canonicalForm [ lemon:writtenRep "theme"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex246 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#Mailbox> lemon:canonicalForm [ lemon:writtenRep "mailbox"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#phone> lemon:sense [ lemon:reference foaf:phone ] ;
+  lemon:canonicalForm [ lemon:writtenRep "phone"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex55 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#MSN> lemon:canonicalForm [ lemon:writtenRep "MSN"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#topic> lemon:sense [ lemon:reference foaf:topic ] ,
+    [ lemon:reference foaf:primaryTopic ] ;
+  lemon:canonicalForm [ lemon:writtenRep "topic"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex623 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#h%C3%A4lt+Konto> lemon:sense [ lemon:reference foaf:holdsAccount ] ;
+  lemon:canonicalForm [ lemon:writtenRep "hält Konto"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#h%C3%A4lt> ]
+    [ lemon:element <unknown:lexicon__de#Konto> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#SHA1> lemon:canonicalForm [ lemon:writtenRep "SHA1"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#pers%C3%B6nliche+Mailbox> lemon:sense [ lemon:reference foaf:mbox ] ;
+  lemon:canonicalForm [ lemon:writtenRep "persönliche Mailbox"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#pers%C3%B6nliche> ]
+    [ lemon:element <unknown:lexicon__de#Mailbox> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#jabber> lemon:canonicalForm [ lemon:writtenRep "jabber"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:workInfoHomepage rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A work info homepage of some person; a page about their work for some organization." ;
+  rdfs:range foaf:Document ;
+  rdfs:label "work info homepage"@en ,"Arbeit-Info-Homepage"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#von> lemon:canonicalForm [ lemon:writtenRep "von"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#family+name> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex192 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex191 ] ;
+  lemon:sense [ lemon:reference foaf:family_name ;
+    lemon:subjOfProp _:node16bacblpex192 ,_:node16bacblpex191 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "family name"@en ] ;
+  lemon:decomposition ( _:node16bacblpex179
+    _:node16bacblpex181
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex179 ] ;
+      lemon:constituent node:NN ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex181 ] ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] .
+
+foaf:givenname vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The given name of some person." ;
+  rdfs:label "Given name"@en ,"Vorname"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#tipjar> lemon:sense [ lemon:reference foaf:tipjar ] ;
+  lemon:canonicalForm [ lemon:writtenRep "tipjar"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex561 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#made> lemon:sense [ lemon:reference foaf:made ] ;
+  lemon:canonicalForm [ lemon:writtenRep "make"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "made"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex901 ;
+      lemon:constituent node:VBN ] ;
+    lemon:constituent node:VP ] ;
+  lemon:pattern en:regularVerb .
+
+foaf:Agent owl:disjointWith foaf:Document ;
+  rdfs:subClassOf wordnet:Agent-3 ;
+  vs:term_status "unstable" ;
+  rdf:type owl:Class ;
+  rdfs:comment "An agent (eg. person, group, software or physical artifact)." ;
+  rdfs:label "Agent"@en ,"Agent"@de .
+
+<unknown:lexicon__en#Myers> lemon:canonicalForm [ lemon:writtenRep "myer"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "myers"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#nickname> lemon:sense [ lemon:reference foaf:nick ] ;
+  lemon:canonicalForm [ lemon:writtenRep "nickname"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex630 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+foaf:gender rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ,owl:FunctionalProperty ;
+  rdfs:comment "The gender of this Agent (typically but not necessarily 'male' or 'female')." ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "Geschlecht"@de ,"gender"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Darstellung> lemon:sense [ lemon:reference foaf:depiction ] ;
+  lemon:canonicalForm [ lemon:writtenRep "darstellung"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#gender> lemon:sense [ lemon:reference foaf:gender ] ;
+  lemon:canonicalForm [ lemon:writtenRep "gender"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex581 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#funded+by> lemon:sense [ lemon:reference foaf:fundedBy ] ;
+  lemon:canonicalForm [ lemon:writtenRep "funded by"@en ] ;
+  lemon:decomposition ( _:node16bacblpex599
+    _:node16bacblpex601
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex601 ] ;
+        lemon:constituent node:IN ] ;
+      lemon:constituent node:PP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex599 ] ;
+      lemon:constituent node:VBN ] ;
+    lemon:constituent node:VP ] .
+
+<unknown:lexicon__de#pers%C3%B6nliche> lemon:canonicalForm [ lemon:writtenRep "persönliche"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#SHA1-Summe+%28Hex%29> lemon:sense [ lemon:reference foaf:sha1 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "SHA1-Summe (Hex)"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#SHA1-Summe> ]
+    [ lemon:element <unknown:lexicon__de#Hex> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<jar:eu.monnetproject.lemon.lela#posTag> rdfs:subPropertyOf lemon:property .
+
+<unknown:lexicon__de#URI> lemon:canonicalForm [ lemon:writtenRep "URI"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#jabber+ID> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex881 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex880 ] ;
+  lemon:sense [ lemon:reference foaf:jabberID ;
+    lemon:subjOfProp _:node16bacblpex880 ,_:node16bacblpex881 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "jabber ID"@en ] ;
+  lemon:decomposition ( _:node16bacblpex868
+    _:node16bacblpex870
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex868 ] ;
+      lemon:constituent node:NNP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex870 ] ;
+      lemon:constituent node:NNP ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__hu#status> lemon:form [ lemon:writtenRep "status"@hu ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#based+near> lemon:sense [ lemon:reference foaf:based_near ] ;
+  lemon:canonicalForm [ lemon:writtenRep "based near"@en ] ;
+  lemon:decomposition ( _:node16bacblpex251
+    _:node16bacblpex253
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex253 ] ;
+        lemon:constituent node:IN ] ;
+      lemon:constituent node:PP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex251 ] ;
+      lemon:constituent node:VBN ] ;
+    lemon:constituent node:VP ] .
+
+<unknown:lexicon__de#aktuelle+Projekt> lemon:sense [ lemon:reference foaf:currentProject ] ;
+  lemon:canonicalForm [ lemon:writtenRep "aktuelle Projekt"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#aktuelle> ]
+    [ lemon:element <unknown:lexicon__de#Projekt> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+lexinfo:partOfSpeech rdfs:subPropertyOf lemon:property .
+
+<unknown:lexicon__en#family> lemon:canonicalForm [ lemon:writtenRep "family"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+foaf:Group rdfs:subClassOf foaf:Agent ;
+  vs:term_status "unstable" ;
+  rdf:type owl:Class ;
+  rdfs:comment "A class of Agents." ;
+  rdfs:label "Gruppe"@de ,"Group"@en .
+
+<unknown:lexicon__de#Online-Gaming-Konto> lemon:sense [ lemon:reference foaf:OnlineGamingAccount ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Online-Gaming-Konto"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#Online> ]
+    [ lemon:element <unknown:lexicon__de#Gaming> ]
+    [ lemon:element <unknown:lexicon__de#Konto> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#funded> lemon:canonicalForm [ lemon:writtenRep "fund"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "funded"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:regularVerb .
+
+<unknown:lexicon__de#Online-E-Commerce-Konto> lemon:sense [ lemon:reference foaf:OnlineEcommerceAccount ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Online-E-Commerce-Konto"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#Online> ]
+    [ lemon:element <unknown:lexicon__de#E> ]
+    [ lemon:element <unknown:lexicon__de#Commerce> ]
+    [ lemon:element <unknown:lexicon__de#Konto> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Myers-Briggs> lemon:sense [ lemon:reference foaf:myersBriggs ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Myers-Briggs"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#Myers> ]
+    [ lemon:element <unknown:lexicon__de#Briggs> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#maker> lemon:sense [ lemon:reference foaf:maker ] ;
+  lemon:canonicalForm [ lemon:writtenRep "maker"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex974 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#profile> lemon:canonicalForm [ lemon:writtenRep "profile"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#sum> lemon:canonicalForm [ lemon:writtenRep "sum"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#Arbeit> lemon:canonicalForm [ lemon:writtenRep "arbeit"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#Myers+Briggs> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex1050 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex1049 ] ;
+  lemon:sense [ lemon:reference foaf:myersBriggs ;
+    lemon:subjOfProp _:node16bacblpex1050 ,_:node16bacblpex1049 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Myers Briggs"@en ] ;
+  lemon:decomposition ( _:node16bacblpex1037
+    _:node16bacblpex1039
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex1039 ] ;
+      lemon:constituent node:NNS ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex1037 ] ;
+      lemon:constituent node:JJ ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__de#Spitzname> lemon:sense [ lemon:reference foaf:nick ] ;
+  lemon:canonicalForm [ lemon:writtenRep "spitzname"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__hu#term+status> lemon:sense [ lemon:reference vs:term_status ] ;
+  lemon:canonicalForm [ lemon:writtenRep "term status"@hu ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__hu#term> ]
+    [ lemon:element <unknown:lexicon__hu#status> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__hu#AIM> lemon:form [ lemon:writtenRep "AIM"@hu ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#personal+profile+document> lemon:sense [ lemon:reference foaf:PersonalProfileDocument ] ;
+  lemon:canonicalForm [ lemon:writtenRep "personal profile document"@en ] ;
+  lemon:decomposition ( _:node16bacblpex744
+    _:node16bacblpex746
+    _:node16bacblpex748
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex744 ] ;
+        lemon:constituent node:JJ ] ,
+        [ lemon:edge [ lemon:leaf _:node16bacblpex748 ] ;
+        lemon:constituent node:NN ] ,
+        [ lemon:edge [ lemon:leaf _:node16bacblpex746 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ;
+    lemon:constituent node:FRAG ] .
+
+<unknown:lexicon__en#geekcode> lemon:sense [ lemon:reference foaf:geekcode ] ;
+  lemon:canonicalForm [ lemon:writtenRep "geekcode"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex594 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+foaf:OnlineAccount vs:term_status "unstable" ;
+  rdf:type owl:Class ;
+  rdfs:comment "An online account." ;
+  rdfs:label "Online Account" ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Ver%C3%B6ffentlichungen> lemon:sense [ lemon:reference foaf:publications ] ;
+  lemon:canonicalForm [ lemon:writtenRep "veröffentlichungen"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#ICQ> lemon:canonicalForm [ lemon:writtenRep "ICQ"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+dc:title rdf:type owl:AnnotationProperty .
+
+foaf:OnlineEcommerceAccount rdfs:subClassOf wordnet:OnlineAccount ;
+  vs:term_status "unstable" ;
+  rdf:type owl:Class ;
+  rdfs:comment "An online e-commerce account." ;
+  rdfs:label "Online E-commerce Account"@en ,"Online-E-Commerce-Konto"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:firstName rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The first name of a person." ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "first name"@en ,"Vorname"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#depicts> lemon:sense [ lemon:reference foaf:depicts ] ;
+  lemon:canonicalForm [ lemon:writtenRep "depict"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "depicts"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge _:node16bacblpex437 ;
+        lemon:constituent node:VBZ ] ;
+      lemon:constituent node:VP ] ;
+    lemon:constituent node:FRAG ] ;
+  lemon:pattern en:regularVerb .
+
+foaf:title vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Title (Mr, Mrs, Ms, Dr. etc)" ;
+  rdfs:label "title"@en ,"Bezeichnung"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#Briggs> lemon:canonicalForm [ lemon:writtenRep "brigg"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "briggs"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#N%C3%A4he> lemon:canonicalForm [ lemon:writtenRep "nähe"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#chat> lemon:canonicalForm [ lemon:writtenRep "chat"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Geekcode> lemon:sense [ lemon:reference foaf:geekcode ] ;
+  lemon:canonicalForm [ lemon:writtenRep "geekcode"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#ID> lemon:canonicalForm [ lemon:writtenRep "ID"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#of> lemon:canonicalForm [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#info> lemon:canonicalForm [ lemon:writtenRep "info"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#der> lemon:canonicalForm [ lemon:writtenRep "der"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#gef%C3%B6rdert> lemon:canonicalForm [ lemon:writtenRep "gefördert"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Kontodienst-Homepage> lemon:sense [ lemon:reference foaf:accountServiceHomepage ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Kontodienst-Homepage"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#Kontodienst> ]
+    [ lemon:element <unknown:lexicon__de#Homepage> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Mitglied> lemon:sense [ lemon:reference foaf:member ] ;
+  lemon:canonicalForm [ lemon:writtenRep "mitglied"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:Document owl:disjointWith foaf:Project ,foaf:Person ,foaf:Organization ;
+  rdfs:subClassOf wordnet:Document ;
+  vs:term_status "testing" ;
+  rdf:type owl:Class ;
+  rdfs:comment "A document." ;
+  rdfs:label "Document"@en ,"Datei"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#MSN-Chat-ID> lemon:sense [ lemon:reference foaf:msnChatID ] ;
+  lemon:canonicalForm [ lemon:writtenRep "MSN-Chat-ID"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#MSN> ]
+    [ lemon:element <unknown:lexicon__de#Chat> ]
+    [ lemon:element <unknown:lexicon__de#ID> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Interessethema> lemon:sense [ lemon:reference foaf:topic_interest ] ;
+  lemon:canonicalForm [ lemon:writtenRep "interessethema"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:img rdfs:subPropertyOf foaf:depiction ;
+  rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage)." ;
+  rdfs:range foaf:Image ;
+  rdfs:label "image"@en ,"Bild"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#pers%C3%B6nlichen> lemon:canonicalForm [ lemon:writtenRep "persönlichen"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#interest+topic> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex24 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex23 ] ;
+  lemon:sense [ lemon:reference foaf:topic_interest ;
+    lemon:subjOfProp _:node16bacblpex24 ,_:node16bacblpex23 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "interest topic"@en ] ;
+  lemon:decomposition ( _:node16bacblpex4
+    _:node16bacblpex6
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex4 ] ;
+      lemon:constituent node:NN ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex6 ] ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__de#Arbeitsplatz> lemon:canonicalForm [ lemon:writtenRep "arbeitsplatz"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:page rdfs:domain rdfs:Resource ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A page or document about this thing." ;
+  rdfs:range foaf:Document ;
+  rdfs:label "Seite"@de ,"page"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#SHA1-Summe+von+einer+pers%C3%B6nlichen+Mailbox-URI-Name> lemon:sense [ lemon:reference foaf:mbox_sha1sum ] ;
+  lemon:canonicalForm [ lemon:writtenRep "SHA1-Summe von einer persönlichen Mailbox-URI-Name"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#SHA1-Summe> ]
+    [ lemon:element <unknown:lexicon__de#von> ]
+    [ lemon:element <unknown:lexicon__de#einer> ]
+    [ lemon:element <unknown:lexicon__de#pers%C3%B6nlichen> ]
+    [ lemon:element <unknown:lexicon__de#Mailbox> ]
+    [ lemon:element <unknown:lexicon__de#URI> ]
+    [ lemon:element <unknown:lexicon__de#Name> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#date> lemon:sense [ lemon:reference dc:date ] ;
+  lemon:canonicalForm [ lemon:writtenRep "date"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex430 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+foaf:topic_interest rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A thing of interest to this person." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "interest topic"@en ,"Interessethema"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:dnaChecksum vs:term_status "unstable" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "A checksum for the DNA of some thing. Joke." ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "DNA checksum" ,"DNA-Checksum"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Konto> lemon:canonicalForm [ lemon:writtenRep "konto"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:family_name rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The family_name of some person." ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "family name"@en ,"Familienname"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#depiction> lemon:sense [ lemon:reference foaf:depiction ] ;
+  lemon:canonicalForm [ lemon:writtenRep "depiction"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex909 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+foaf:mbox rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ,owl:InverseFunctionalProperty ;
+  rdfs:comment "A personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "persönliche Mailbox"@de ,"personal mailbox"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__hu#Online+Account> lemon:sense [ lemon:reference foaf:OnlineAccount ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Online Account"@hu ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__hu#Online> ]
+    [ lemon:element <unknown:lexicon__hu#Account> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Mitgliedschaftsklasse> lemon:sense [ lemon:reference foaf:membershipClass ] ;
+  lemon:canonicalForm [ lemon:writtenRep "mitgliedschaftsklasse"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Chat> lemon:canonicalForm [ lemon:writtenRep "chat"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__hu#Online> lemon:form [ lemon:writtenRep "online"@hu ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:thumbnail rdfs:domain foaf:Image ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A derived thumbnail image." ,"Miniaturansicht"@de ;
+  rdfs:range foaf:Image ;
+  rdfs:label "thumbnail"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#interest> lemon:sense [ lemon:reference foaf:interest ] ;
+  lemon:canonicalForm [ lemon:writtenRep "interest"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex574 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#Hex> lemon:canonicalForm [ lemon:writtenRep "hex"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Gaming> lemon:canonicalForm [ lemon:writtenRep "gaming"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#past> lemon:canonicalForm [ lemon:writtenRep "past"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Interesse> lemon:sense [ lemon:reference foaf:interest ] ;
+  lemon:canonicalForm [ lemon:writtenRep "interesse"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:logo rdfs:domain rdfs:Resource ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A logo representing some thing." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "logo"@en ,"Logo"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Jabber-ID> lemon:sense [ lemon:reference foaf:jabberID ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Jabber-ID"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#Jabber> ]
+    [ lemon:element <unknown:lexicon__de#ID> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__fr#description> lemon:sense [ lemon:reference dc:description ] ;
+  lemon:form [ lemon:writtenRep "description"@fr ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#thumbnail> lemon:sense [ lemon:reference foaf:thumbnail ] ;
+  lemon:canonicalForm [ lemon:writtenRep "thumbnail"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex980 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+foaf:aimChatID rdfs:subPropertyOf foaf:nick ;
+  rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ,owl:InverseFunctionalProperty ;
+  rdfs:comment "Aim-Chat-ID"@de ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "AIM chat ID"@en ,"An AIM chat ID" ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Bild> lemon:sense [ lemon:reference foaf:Image ] ,
+    [ lemon:reference foaf:img ] ;
+  lemon:form [ lemon:writtenRep "bild"@de ] ;
+  lemon:canonicalForm [ lemon:writtenRep "bild"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#ICQ+chat+ID> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex215 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex214 ] ;
+  lemon:sense [ lemon:reference foaf:icqChatID ;
+    lemon:subjOfProp _:node16bacblpex214 ,_:node16bacblpex215 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "ICQ chat ID"@en ] ;
+  lemon:decomposition ( _:node16bacblpex197
+    _:node16bacblpex199
+    _:node16bacblpex201
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex199 ] ;
+      lemon:constituent node:NNP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex197 ] ;
+      lemon:constituent node:NNP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex201 ] ;
+      lemon:constituent node:NNP ] ;
+    lemon:constituent node:NP ] .
+
+foaf:name owl:dataPropertyRange rdfs:Literal ;
+  rdfs:subPropertyOf rdfs:label ;
+  vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "A name for some thing." ;
+  owl:dataPropertyDomain rdfs:Resource ;
+  rdfs:label "Name"@de ,"name"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#ICQ> lemon:canonicalForm [ lemon:writtenRep "ICQ"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__hu#chat> lemon:form [ lemon:writtenRep "chat"@hu ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#name> lemon:sense [ lemon:reference foaf:name ] ;
+  lemon:canonicalForm [ lemon:writtenRep "name"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex587 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#Surname> lemon:sense [ lemon:reference foaf:surname ] ;
+  lemon:canonicalForm [ lemon:writtenRep "surname"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex309 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<http://xmlns.com/foaf/0.1/> dc:description "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language." ;
+  rdfs:seeAlso rdfweb:foaf ;
+  dc:title "Friend of a Friend (FOAF) vocabulary" ;
+  rdf:type owl:Ontology ;
+  dc:date "$Date: 2004/05/04 20:57:07 $" .
+
+<unknown:lexicon__en#membership> lemon:canonicalForm [ lemon:writtenRep "membership"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#mailbox__1> lemon:canonicalForm [ lemon:writtenRep "mailbox"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#based> lemon:canonicalForm [ lemon:writtenRep "base"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "based"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:pattern en:regularVerb .
+
+en:noun lemon:transform [ lemon:rule "~(?<=s|o|sh)/~es" ,"~(?<=[^aeiou])y/~ies" ,"~(?<![^aeiou]y|s|o|sh)/~s" ;
+    lemon:generates [ lexinfo:number lexinfo:plural ] ] ;
+  rdf:type lemon:MorphPattern ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+foaf:plan rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "A .plan comment, in the tradition of finger and '.plan' files." ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "plan"@en ,"Plan"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:fundedBy rdfs:domain rdfs:Resource ;
+  vs:term_status "unstable" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "An organization funding a project or person." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "funded by"@en ,"gefördert von"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:interest rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A page about a topic of interest to this person." ;
+  rdfs:range foaf:Document ;
+  rdfs:label "interest"@en ,"Interesse"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Kontoname> lemon:sense [ lemon:reference foaf:accountName ] ;
+  lemon:canonicalForm [ lemon:writtenRep "kontoname"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Seite> lemon:sense [ lemon:reference foaf:page ] ;
+  lemon:canonicalForm [ lemon:writtenRep "seite"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:maker rdfs:domain rdfs:Resource ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "An agent that made this thing." ;
+  rdfs:range foaf:Agent ;
+  rdfs:label "Hersteller"@de ,"maker"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#Briggs> lemon:canonicalForm [ lemon:writtenRep "briggs"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+lexinfo:number rdfs:subPropertyOf lemon:property .
+
+dc:date rdf:type owl:AnnotationProperty .
+
+<unknown:lexicon__en#MSN+chat+ID> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex521 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex520 ] ;
+  lemon:sense [ lemon:reference foaf:msnChatID ;
+    lemon:subjOfProp _:node16bacblpex521 ,_:node16bacblpex520 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "MSN chat ID"@en ] ;
+  lemon:decomposition ( _:node16bacblpex503
+    _:node16bacblpex505
+    _:node16bacblpex507
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex503 ] ;
+      lemon:constituent node:NNP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex507 ] ;
+      lemon:constituent node:NNP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex505 ] ;
+      lemon:constituent node:NNP ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__de#Yahoo> lemon:canonicalForm [ lemon:writtenRep "yahoo"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Tipjar> lemon:sense [ lemon:reference foaf:tipjar ] ;
+  lemon:canonicalForm [ lemon:writtenRep "tipjar"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#h%C3%A4lt> lemon:canonicalForm [ lemon:writtenRep "hält"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#past+project> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex548 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex547 ] ;
+  lemon:sense [ lemon:reference foaf:pastProject ;
+    lemon:subjOfProp _:node16bacblpex548 ,_:node16bacblpex547 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "past project"@en ] ;
+  lemon:decomposition ( _:node16bacblpex535
+    _:node16bacblpex537
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex537 ] ;
+      lemon:constituent node:NN ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex535 ] ;
+      lemon:constituent node:JJ ] ;
+    lemon:constituent node:NP ] .
+
+lexinfo:person rdfs:subPropertyOf lemon:property .
+
+foaf:primaryTopic rdfs:domain foaf:Document ;
+  vs:term_status "testing" ;
+  rdf:type owl:FunctionalProperty ,owl:ObjectProperty ;
+  rdfs:comment "The primary topic of some page or document." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "topic"@en ,"Hauptthema"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:pastProject rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A project this person has previously worked on." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "past project"@en ,"vorheriges Projekt"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#publications> lemon:sense [ lemon:reference foaf:publications ] ;
+  lemon:canonicalForm [ lemon:writtenRep "publication"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "publications"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex780 ;
+      lemon:constituent node:NNS ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+foaf:mbox_sha1sum rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ,owl:InverseFunctionalProperty ;
+  rdfs:comment "The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox." ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "SHA1-Summe von einer persönlichen Mailbox-URI-Name"@de ,"SHA1 sum of a personal mailbox URI name"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__en#by> lemon:canonicalForm [ lemon:writtenRep "by"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+foaf:geekcode rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "A textual geekcode for this person, see http://www.geekcode.com/geek.html" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "geekcode"@en ,"Geekcode"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+<unknown:lexicon__de#gemacht> lemon:sense [ lemon:reference foaf:made ] ;
+  lemon:canonicalForm [ lemon:writtenRep "gemacht"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Jabber> lemon:canonicalForm [ lemon:writtenRep "jabber"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#AIM+chat+ID> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex1020 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex1019 ] ;
+  lemon:sense [ lemon:reference foaf:aimChatID ;
+    lemon:subjOfProp _:node16bacblpex1020 ,_:node16bacblpex1019 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "AIM chat ID"@en ] ;
+  lemon:decomposition ( _:node16bacblpex1002
+    _:node16bacblpex1004
+    _:node16bacblpex1006
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex1002 ] ;
+      lemon:constituent node:NNP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex1004 ] ;
+      lemon:constituent node:NNP ] ,
+      [ lemon:edge [ lemon:leaf _:node16bacblpex1006 ] ;
+      lemon:constituent node:NNP ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__de#Kontodienst> lemon:canonicalForm [ lemon:writtenRep "kontodienst"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#DNA-Checksum> lemon:sense [ lemon:reference foaf:dnaChecksum ] ;
+  lemon:canonicalForm [ lemon:writtenRep "DNA-Checksum"@de ] ;
+  lemon:decomposition ( [ lemon:element <unknown:lexicon__de#DNA> ]
+    [ lemon:element <unknown:lexicon__de#Checksum> ]
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#account+service+homepage> lemon:synBehavior [ rdf:type lexinfo:NounPossesiveFrame ;
+    lexinfo:copulativeArg _:node16bacblpex720 ;
+    lexinfo:possesiveAdjunct _:node16bacblpex719 ] ;
+  lemon:sense [ lemon:reference foaf:accountServiceHomepage ;
+    lemon:subjOfProp _:node16bacblpex719 ,_:node16bacblpex720 ] ;
+  lemon:canonicalForm [ lemon:writtenRep "account service homepage"@en ] ;
+  lemon:decomposition ( _:node16bacblpex700
+    _:node16bacblpex702
+    _:node16bacblpex704
+    ) ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex700 ] ;
+        lemon:constituent node:NN ] ,
+        [ lemon:edge [ lemon:leaf _:node16bacblpex702 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ,
+      [ lemon:edge [ lemon:edge [ lemon:leaf _:node16bacblpex704 ] ;
+        lemon:constituent node:NN ] ;
+      lemon:constituent node:NP ] ;
+    lemon:constituent node:NP ] .
+
+<unknown:lexicon__en#Online> lemon:canonicalForm [ lemon:writtenRep "online"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#Agent> lemon:sense [ lemon:reference foaf:Agent ] ;
+  lemon:canonicalForm [ lemon:writtenRep "agent"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#plan> lemon:sense [ lemon:reference foaf:plan ] ;
+  lemon:canonicalForm [ lemon:writtenRep "plan"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex424 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__de#vorheriges> lemon:canonicalForm [ lemon:writtenRep "vorheriges"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__de#zeigt> lemon:sense [ lemon:reference foaf:depicts ] ;
+  lemon:canonicalForm [ lemon:writtenRep "zeigt"@de ] ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview .
+
+<unknown:lexicon__en#knows> lemon:sense [ lemon:reference foaf:knows ] ;
+  lemon:canonicalForm [ lemon:writtenRep "know"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "knows"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge [ lemon:edge _:node16bacblpex663 ;
+        lemon:constituent node:VBZ ] ;
+      lemon:constituent node:VP ] ;
+    lemon:constituent node:FRAG ] ;
+  lemon:pattern en:regularVerb .
+
+<unknown:lexicon__en#image> lemon:sense [ lemon:reference foaf:img ] ,
+    [ lemon:reference foaf:Image ] ;
+  lemon:canonicalForm [ lemon:writtenRep "image"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <http://monnetproject.deri.ie/reviewstatus> reviewstatus:autoreview ;
+  lemon:phraseRoot [ lemon:edge [ lemon:edge _:node16bacblpex231 ;
+      lemon:constituent node:NN ] ;
+    lemon:constituent node:NP ] ;
+  lemon:pattern en:noun .
+
+<unknown:lexicon__en#lexicon> rdf:type lemon:Lexicon ;
+  lemon:entry <unknown:lexicon__en#page> ,<unknown:lexicon__en#holds+account> ,<unknown:lexicon__en#interest+topic> ,
+    <unknown:lexicon__en#school+homepage> ,<unknown:lexicon__en#project> ,<unknown:lexicon__en#family> ,
+    <unknown:lexicon__en#SHA1+sum+of+a+personal+mailbox+URI+name> ,<unknown:lexicon__en#date> ,<unknown:lexicon__en#SHA1+Sum+%28hex%29> ,
+    <unknown:lexicon__en#current> ,<unknown:lexicon__en#hex> ,<unknown:lexicon__en#theme> ,
+    <unknown:lexicon__en#current+project> ,<unknown:lexicon__en#MSN+chat+ID> ,<unknown:lexicon__en#Online+Gaming+Account> ,
+    <unknown:lexicon__en#phone> ,<unknown:lexicon__en#homepage> ,<unknown:lexicon__en#MSN> ,
+    <unknown:lexicon__en#past+project> ,<unknown:lexicon__en#funded> ,<unknown:lexicon__en#topic> ,
+    <unknown:lexicon__en#a> ,<unknown:lexicon__en#Given+name> ,<unknown:lexicon__en#Yahoo+chat+ID> ,
+    <unknown:lexicon__en#maker> ,<unknown:lexicon__en#Chat> ,<unknown:lexicon__en#depiction> ,
+    <unknown:lexicon__en#E> ,<unknown:lexicon__en#sum> ,<unknown:lexicon__en#profile> ,
+    <unknown:lexicon__en#SHA1> ,<unknown:lexicon__en#personal> ,<unknown:lexicon__en#jabber> ,
+    <unknown:lexicon__en#workplace+homepage> ,<unknown:lexicon__en#interest> ,<unknown:lexicon__en#Myers+Briggs> ,
+    <unknown:lexicon__en#first> ,<unknown:lexicon__en#past> ,<unknown:lexicon__en#publications> ,
+    <unknown:lexicon__en#service> ,<unknown:lexicon__en#URI> ,<unknown:lexicon__en#SHA1__1> ,
+    <unknown:lexicon__en#work> ,<unknown:lexicon__en#family+name> ,<unknown:lexicon__en#by> ,
+    <unknown:lexicon__en#workplace> ,<unknown:lexicon__en#title> ,<unknown:lexicon__en#personal+profile+document> ,
+    <unknown:lexicon__en#geekcode> ,<unknown:lexicon__en#Agent> ,<unknown:lexicon__en#Yahoo> ,
+    <unknown:lexicon__en#weblog> ,<unknown:lexicon__en#ICQ> ,<unknown:lexicon__en#tipjar> ,
+    <unknown:lexicon__en#account> ,<unknown:lexicon__en#first+name> ,<unknown:lexicon__en#personal+mailbox> ,
+    <unknown:lexicon__en#depicts> ,<unknown:lexicon__en#made> ,<unknown:lexicon__en#thumbnail> ,
+    <unknown:lexicon__en#membership+class> ,<unknown:lexicon__en#Briggs> ,<unknown:lexicon__en#Myers> ,
+    <unknown:lexicon__en#AIM+chat+ID> ,<unknown:lexicon__en#member> ,<unknown:lexicon__en#nickname> ,
+    <unknown:lexicon__en#Given> ,<unknown:lexicon__en#ICQ+chat+ID> ,<unknown:lexicon__en#chat> ,
+    <unknown:lexicon__en#Person> ,<unknown:lexicon__en#Organization> ,<unknown:lexicon__en#Gaming> ,
+    <unknown:lexicon__en#logo> ,<unknown:lexicon__en#holds> ,<unknown:lexicon__en#name> ,
+    <unknown:lexicon__en#gender> ,<unknown:lexicon__en#account+service+homepage> ,<unknown:lexicon__en#funded+by> ,
+    <unknown:lexicon__en#school> ,<unknown:lexicon__en#Online> ,<unknown:lexicon__en#plan> ,
+    <unknown:lexicon__en#Document> ,<unknown:lexicon__en#Surname> ,<unknown:lexicon__en#near> ,
+    <unknown:lexicon__en#of> ,<unknown:lexicon__en#info> ,<unknown:lexicon__en#Group> ,
+    <unknown:lexicon__en#Online+Chat+Account> ,<unknown:lexicon__en#account+name> ,<unknown:lexicon__en#membership> ,
+    <unknown:lexicon__en#mailbox> ,<unknown:lexicon__en#knows> ,<unknown:lexicon__en#image> ,
+    <unknown:lexicon__en#ID> ,<unknown:lexicon__en#mailbox__1> ,<unknown:lexicon__en#based> ,
+    <unknown:lexicon__en#AIM> ,<unknown:lexicon__en#work+info+homepage> ,<unknown:lexicon__en#jabber+ID> ,
+    <unknown:lexicon__en#Online+E-commerce+Account> ,<unknown:lexicon__en#class> ,<unknown:lexicon__en#based+near> ,
+    <unknown:lexicon__en#commerce> ;
+  lemon:language "en" ;
+  lemon:pattern en:noun ,en:regularVerb .
+
+foaf:nick vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames)." ;
+  rdfs:label "Spitzname"@de ,"nickname"@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:knows rdfs:domain foaf:Person ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A person known by this person (indicating some level of reciprocated interaction between the parties)." ;
+  rdfs:range foaf:Person ;
+  rdfs:label "knows"@en ,"kennt"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+foaf:icqChatID rdfs:subPropertyOf foaf:nick ;
+  rdfs:domain foaf:Agent ;
+  vs:term_status "testing" ;
+  rdf:type owl:ObjectProperty ,owl:InverseFunctionalProperty ;
+  rdfs:comment "An ICQ chat ID" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "ICQ chat ID"@en ,"ICQ-Chat-ID"@de ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/"^^xsd:anyURI .
+
+_:node16bacblpex553 lemon:writtenRep "projekt"@de .
+
+_:node16bacblpex535 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#past> .
+
+_:node16bacblpex537 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#project> .
+
+_:node16bacblpex538 lemon:writtenRep "project"@en .
+
+_:node16bacblpex599 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#funded> .
+
+_:node16bacblpex791 lemon:writtenRep "homepage"@en .
+
+_:node16bacblpex790 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#homepage> .
+
+_:node16bacblpex398 lemon:edge [ lemon:edge _:node16bacblpex400 ;
+    lemon:constituent node:NN ] ;
+  lemon:constituent node:NP .
+
+_:node16bacblpex395 lemon:writtenRep "image"@en .
+
+_:node16bacblpex199 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#chat> .
+
+_:node16bacblpex197 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#ICQ> .
+
+_:node16bacblpex384 lemon:writtenRep "SHA1-Summe"@de .
+
+_:node16bacblpex181 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#name> .
+
+_:node16bacblpex182 lemon:writtenRep "name"@en .
+
+_:node16bacblpex788 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#info> .
+
+_:node16bacblpex786 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#work> .
+
+_:node16bacblpex179 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#family> .
+
+_:node16bacblpex366 lemon:writtenRep "sum"@en .
+
+_:node16bacblpex365 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#sum> .
+
+_:node16bacblpex363 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#SHA1__1> .
+
+_:node16bacblpex367 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#hex> .
+
+_:node16bacblpex332 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#current> .
+
+_:node16bacblpex334 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#project> .
+
+_:node16bacblpex316 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#name> .
+
+_:node16bacblpex317 lemon:writtenRep "name"@en .
+
+_:node16bacblpex314 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#account> .
+
+_:node16bacblpex315 lemon:writtenRep "account"@en .
+
+_:node16bacblpex102 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#mailbox> .
+
+_:node16bacblpex100 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#personal> .
+
+_:node16bacblpex106 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#name> .
+
+_:node16bacblpex104 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#URI> .
+
+_:node16bacblpex405 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#Given> .
+
+_:node16bacblpex407 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#name> .
+
+_:node16bacblpex886 lemon:writtenRep "ID"@de .
+
+_:node16bacblpex601 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#by> .
+
+_:node16bacblpex98 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#a> .
+
+_:node16bacblpex96 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#of> .
+
+_:node16bacblpex871 lemon:writtenRep "ID"@en .
+
+_:node16bacblpex870 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#ID> .
+
+_:node16bacblpex94 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#sum> .
+
+_:node16bacblpex92 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#SHA1> .
+
+_:node16bacblpex868 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#jabber> .
+
+_:node16bacblpex850 lemon:writtenRep "online"@de .
+
+_:node16bacblpex854 lemon:writtenRep "konto"@de .
+
+_:node16bacblpex852 lemon:writtenRep "chat"@de .
+
+_:node16bacblpex6 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#topic> .
+
+_:node16bacblpex4 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#interest> .
+
+_:node16bacblpex60 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#Yahoo> .
+
+_:node16bacblpex62 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#chat> .
+
+_:node16bacblpex64 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#ID> .
+
+_:node16bacblpex642 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#first> .
+
+_:node16bacblpex644 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#name> .
+
+_:node16bacblpex645 lemon:writtenRep "name"@en .
+
+_:node16bacblpex832 lemon:writtenRep "account"@en .
+
+_:node16bacblpex831 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#account> .
+
+_:node16bacblpex828 lemon:writtenRep "online"@en .
+
+_:node16bacblpex829 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#Chat> .
+
+_:node16bacblpex827 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#Online> .
+
+_:node16bacblpex813 lemon:writtenRep "homepage"@de .
+
+_:node16bacblpex31 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#account> .
+
+_:node16bacblpex29 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#holds> .
+
+_:node16bacblpex616 lemon:writtenRep "von"@de .
+
+_:node16bacblpex669 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#personal> .
+
+_:node16bacblpex251 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#based> .
+
+_:node16bacblpex253 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#near> .
+
+_:node16bacblpex671 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#mailbox__1> .
+
+_:node16bacblpex670 lemon:writtenRep "personal"@en .
+
+_:node16bacblpex283 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#workplace> .
+
+_:node16bacblpex285 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#homepage> .
+
+_:node16bacblpex687 lemon:writtenRep "mailbox"@de .
+
+_:node16bacblpex274 lemon:writtenRep "von"@de .
+
+_:node16bacblpex496 lemon:writtenRep "konto"@de .
+
+_:node16bacblpex469 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#Online> .
+
+_:node16bacblpex461 lemon:writtenRep "homepage"@de .
+
+_:node16bacblpex200 lemon:writtenRep "chat"@en .
+
+_:node16bacblpex201 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#ID> .
+
+_:node16bacblpex202 lemon:writtenRep "ID"@en .
+
+_:node16bacblpex474 lemon:writtenRep "account"@en .
+
+_:node16bacblpex473 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#account> .
+
+_:node16bacblpex471 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#Gaming> .
+
+_:node16bacblpex222 lemon:writtenRep "ID"@de .
+
+_:node16bacblpex220 lemon:writtenRep "chat"@de .
+
+_:node16bacblpex408 lemon:writtenRep "name"@en .
+
+_:node16bacblpex443 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#school> .
+
+_:node16bacblpex446 lemon:writtenRep "homepage"@en .
+
+_:node16bacblpex445 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#homepage> .
+
+_:node16bacblpex503 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#MSN> .
+
+_:node16bacblpex506 lemon:writtenRep "chat"@en .
+
+_:node16bacblpex505 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#chat> .
+
+_:node16bacblpex507 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#ID> .
+
+_:node16bacblpex508 lemon:writtenRep "ID"@en .
+
+_:node16bacblpex526 lemon:writtenRep "chat"@de .
+
+_:node16bacblpex528 lemon:writtenRep "ID"@de .
+
+_:node16bacblpex984 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#membership> .
+
+_:node16bacblpex986 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#class> .
+
+_:node16bacblpex702 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#service> .
+
+_:node16bacblpex701 lemon:writtenRep "account"@en .
+
+_:node16bacblpex704 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#homepage> .
+
+_:node16bacblpex700 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#account> .
+
+_:node16bacblpex725 lemon:writtenRep "homepage"@de .
+
+_:node16bacblpex705 lemon:writtenRep "homepage"@en .
+
+_:node16bacblpex1039 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#Briggs> .
+
+_:node16bacblpex1037 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#Myers> .
+
+_:node16bacblpex745 lemon:writtenRep "personal"@en .
+
+_:node16bacblpex746 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#profile> .
+
+_:node16bacblpex748 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#Document> .
+
+_:node16bacblpex936 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#account> .
+
+_:node16bacblpex937 lemon:writtenRep "account"@en .
+
+_:node16bacblpex744 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#personal> .
+
+_:node16bacblpex934 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#commerce> .
+
+_:node16bacblpex932 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#E> .
+
+_:node16bacblpex931 lemon:writtenRep "online"@en .
+
+_:node16bacblpex930 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#Online> .
+
+_:node16bacblpex964 lemon:writtenRep "konto"@de .
+
+_:node16bacblpex958 lemon:writtenRep "online"@de .
+
+_:node16bacblpex763 lemon:writtenRep "persönliche"@de .
+
+_:node16bacblpex768 lemon:writtenRep "project"@en .
+
+_:node16bacblpex1005 lemon:writtenRep "chat"@en .
+
+_:node16bacblpex1006 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#ID> .
+
+_:node16bacblpex1007 lemon:writtenRep "ID"@en .
+
+_:node16bacblpex1004 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#chat> .
+
+_:node16bacblpex1002 rdf:type lemon:Component ;
+  lemon:element <unknown:lexicon__en#AIM> .
+
+_:node16bacblpex749 lemon:writtenRep "document"@en .
+

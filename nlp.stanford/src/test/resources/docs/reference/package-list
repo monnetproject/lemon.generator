@@ -1,0 +1,6 @@
+eu.monnetproject.parser.stanford
+eu.monnetproject.splitter.stanford
+eu.monnetproject.stanford.modules
+eu.monnetproject.tagger.stanford
+eu.monnetproject.tokenizer.stanford
+

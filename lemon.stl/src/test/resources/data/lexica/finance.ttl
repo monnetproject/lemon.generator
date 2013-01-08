@@ -1,0 +1,480 @@
+@prefix yago: <http://dbpedia.org/class/yago/>.
+@prefix nci: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>.
+@prefix example: <http://nlp.deri.ie/ontologies/finance/example#>.
+@prefix xslwd: <http://www.w3.org/TR/WD-xsl>.
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>.
+@prefix mesh: <http://purl.org/commons/record/mesh/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix sc: <http://purl.org/science/owl/sciencecommons/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dawgt: <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix protseq: <http://purl.org/science/protein/bysequence/>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix rdfdf: <http://www.openlinksw.com/virtrdf-data-formats#>.
+@prefix obo: <http://www.geneontology.org/formats/oboInOwl#>.
+@prefix xsl10: <http://www.w3.org/XSL/Transform/1.0>.
+@prefix dbpprop: <http://dbpedia.org/property/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#>.
+@prefix bif: <bif:>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>.
+@prefix dbpedia: <http://dbpedia.org/resource/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix xsl1999: <http://www.w3.org/1999/XSL/Transform>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix virtrdf: <http://www.openlinksw.com/schemas/virtrdf#>.
+@prefix scovo: <http://purl.org/NET/scovo#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix sql: <sql:>.
+@prefix lemon: <http://www.monnet-project.eu/lemon#>.
+@prefix go: <http://purl.org/obo/owl/GO#>.
+@prefix xf: <http://www.w3.org/2004/07/xpath-functions>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<http://monnetproject.deri.ie/finance__en#Current> lemon:form [ lemon:writtenRep "current"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#than> lemon:form [ lemon:writtenRep "than"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#IN> .
+
+<http://monnetproject.deri.ie/finance__en#financial__1> lemon:form [ lemon:writtenRep "financial"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#Amounts+payable+within+one+year> lemon:sense [ lemon:reference example:AmountsPayableWithinOneYear ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Amounts payable within one year"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ,lexinfo:singular ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Amounts> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#payable> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#within> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#one> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#year> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#Interest> lemon:form [ lemon:writtenRep "interest"@en ;
+    lexinfo:number lexinfo:singular ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NN> .
+
+<http://monnetproject.deri.ie/finance__en#Financial+fixed+assets> lemon:sense [ lemon:reference example:FinancialFixedAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Financial fixed assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Financial> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#fixed__1> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#assets__1> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#more> lemon:form [ lemon:writtenRep "more"@en ;
+    lexinfo:degree lexinfo:comparative ] ;
+  lexinfo:partOfSpeech lexinfo:adverb ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#RBR> .
+
+<http://monnetproject.deri.ie/finance__en#lexicon> rdf:type lemon:Lexicon ;
+  lemon:entry <http://monnetproject.deri.ie/finance__en#year__1> ,<http://monnetproject.deri.ie/finance__en#brought> ,<http://monnetproject.deri.ie/finance__en#Current> ,
+    <http://monnetproject.deri.ie/finance__en#than> ,<http://monnetproject.deri.ie/finance__en#financial__1> ,<http://monnetproject.deri.ie/finance__en#year> ,
+    <http://monnetproject.deri.ie/finance__en#Land+and+buildings> ,<http://monnetproject.deri.ie/finance__en#fixed> ,<http://monnetproject.deri.ie/finance__en#Financial> ,
+    <http://monnetproject.deri.ie/finance__en#after> ,<http://monnetproject.deri.ie/finance__en#assets__7> ,<http://monnetproject.deri.ie/finance__en#Liquid+assets> ,
+    <http://monnetproject.deri.ie/finance__en#Amounts+payable+within+one+year> ,<http://monnetproject.deri.ie/finance__en#Current+assets> ,<http://monnetproject.deri.ie/finance__en#Amounts+payable+after+more+than+one+year> ,
+    <http://monnetproject.deri.ie/finance__en#assets__5> ,<http://monnetproject.deri.ie/finance__en#Profit+%28loss%29+brought+forward> ,<http://monnetproject.deri.ie/finance__en#assets__6> ,
+    <http://monnetproject.deri.ie/finance__en#Interest> ,<http://monnetproject.deri.ie/finance__en#Profit> ,<http://monnetproject.deri.ie/finance__en#buildings> ,
+    <http://monnetproject.deri.ie/finance__en#fixed__1> ,<http://monnetproject.deri.ie/finance__en#Other+financial+assets> ,<http://monnetproject.deri.ie/finance__en#Financial+fixed+assets> ,
+    <http://monnetproject.deri.ie/finance__en#on__1> ,<http://monnetproject.deri.ie/finance__en#more> ,<http://monnetproject.deri.ie/finance__en#Fixed> ,
+    <http://monnetproject.deri.ie/finance__en#payable__1> ,<http://monnetproject.deri.ie/finance__en#Interest+paid+on+financial+debts> ,<http://monnetproject.deri.ie/finance__en#payable__2> ,
+    <http://monnetproject.deri.ie/finance__en#assets__4> ,<http://monnetproject.deri.ie/finance__en#assets__3> ,<http://monnetproject.deri.ie/finance__en#Other> ,
+    <http://monnetproject.deri.ie/finance__en#assets__2> ,<http://monnetproject.deri.ie/finance__en#assets__1> ,<http://monnetproject.deri.ie/finance__en#Depreciation+on+intangible+and+tangible+fixed+assets> ,
+    <http://monnetproject.deri.ie/finance__en#Amounts+payable> ,<http://monnetproject.deri.ie/finance__en#Liquid> ,<http://monnetproject.deri.ie/finance__en#forward> ,
+    <http://monnetproject.deri.ie/finance__en#tangible> ,<http://monnetproject.deri.ie/finance__en#Fixed+assets> ,<http://monnetproject.deri.ie/finance__en#Assets> ,
+    <http://monnetproject.deri.ie/finance__en#one__1> ,<http://monnetproject.deri.ie/finance__en#Depreciation> ,<http://monnetproject.deri.ie/finance__en#loss> ,
+    <http://monnetproject.deri.ie/finance__en#payable> ,<http://monnetproject.deri.ie/finance__en#intangible__1> ,<http://monnetproject.deri.ie/finance__en#Intangible+fixed+assets> ,
+    <http://monnetproject.deri.ie/finance__en#assets> ,<http://monnetproject.deri.ie/finance__en#fixed__2> ,<http://monnetproject.deri.ie/finance__en#Amounts__1> ,
+    <http://monnetproject.deri.ie/finance__en#fixed__3> ,<http://monnetproject.deri.ie/finance__en#Amounts__2> ,<http://monnetproject.deri.ie/finance__en#intangible> ,
+    <http://monnetproject.deri.ie/finance__en#within> ,<http://monnetproject.deri.ie/finance__en#on> ,<http://monnetproject.deri.ie/finance__en#Land> ,
+    <http://monnetproject.deri.ie/finance__en#paid> ,<http://monnetproject.deri.ie/finance__en#Other__1> ,<http://monnetproject.deri.ie/finance__en#Amounts> ,
+    <http://monnetproject.deri.ie/finance__en#and> ,<http://monnetproject.deri.ie/finance__en#Intangible> ,<http://monnetproject.deri.ie/finance__en#and__1> ,
+    <http://monnetproject.deri.ie/finance__en#one> ,<http://monnetproject.deri.ie/finance__en#financial> ,<http://monnetproject.deri.ie/finance__en#debts> ,
+    <http://monnetproject.deri.ie/finance__en#Other+intangible+fixed+assets> ;
+  lemon:language "en" .
+
+<http://monnetproject.deri.ie/finance__en#loss> lemon:form [ lemon:writtenRep "loss"@en ;
+    lexinfo:number lexinfo:singular ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NN> .
+
+<http://monnetproject.deri.ie/finance__en#Amounts__1> lemon:form [ lemon:writtenRep "amounts"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#Amounts__2> lemon:form [ lemon:writtenRep "amounts"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#paid> lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "paid"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#VBN> .
+
+<http://monnetproject.deri.ie/finance__en#Other__1> lemon:form [ lemon:writtenRep "other"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#and__1> lemon:form [ lemon:writtenRep "and"@en ] ;
+  lexinfo:partOfSpeech lexinfo:conjunction ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#CC> .
+
+<http://monnetproject.deri.ie/finance__en#one> lemon:form [ lemon:writtenRep "one"@en ] ;
+  lexinfo:partOfSpeech lexinfo:cardinalNumeral ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#CD> .
+
+<http://monnetproject.deri.ie/finance__en#financial> lemon:form [ lemon:writtenRep "financial"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#brought> lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "brought"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#VBN> .
+
+<http://monnetproject.deri.ie/finance__en#Financial> lemon:form [ lemon:writtenRep "financial"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#assets__7> lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#assets__5> lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#Profit+%28loss%29+brought+forward> lemon:sense [ lemon:reference example:ProfitLossBroughtForward ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Profit (loss) brought forward"@en ] ;
+  lemon:decomposition ( [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:indicative ;
+      lexinfo:aspect lexinfo:perfective ;
+      lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:singular ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Profit> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#loss> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#brought> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#forward> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#assets__6> lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#Profit> lemon:form [ lemon:writtenRep "profit"@en ;
+    lexinfo:number lexinfo:singular ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NN> .
+
+lexinfo:aspect rdfs:subPropertyOf lemon:property .
+
+<http://monnetproject.deri.ie/finance__en#fixed__1> lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "fixed"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#VBN> .
+
+<http://monnetproject.deri.ie/finance__en#Other+financial+assets> lemon:sense [ lemon:reference example:OtherFinancialAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Other financial assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Other__1> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#financial__1> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#assets__4> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#Fixed> lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "fixed"@en ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#VBN> .
+
+<http://monnetproject.deri.ie/finance__en#Interest+paid+on+financial+debts> lemon:sense [ lemon:reference example:InterestPaidOnFinancialDebts ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Interest paid on financial debts"@en ] ;
+  lemon:decomposition ( [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:participle ;
+      lexinfo:aspect lexinfo:perfective ;
+      lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ,lexinfo:singular ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Interest> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#paid> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#on__1> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#financial> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#debts> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#assets__4> lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#assets__3> lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#Other> lemon:form [ lemon:writtenRep "other"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#assets__2> lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#assets__1> lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#tangible> lemon:form [ lemon:writtenRep "tangible"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#Fixed+assets> lemon:sense [ lemon:reference example:FixedAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Fixed assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:participle ;
+      lexinfo:aspect lexinfo:perfective ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Fixed> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#assets__7> ]
+    ) .
+
+
+ <http://monnetproject.deri.ie/finance__en#Assets> lemon:sense [ lemon:reference example:Assets ] ;
+  lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#assets> lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<jar:eu.monnetproject.lemon.lela#posTag> rdfs:subPropertyOf lemon:property .
+
+<http://monnetproject.deri.ie/finance__en#and> lemon:form [ lemon:writtenRep "and"@en ] ;
+  lexinfo:partOfSpeech lexinfo:conjunction ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#CC> .
+
+<http://monnetproject.deri.ie/finance__en#debts> lemon:form [ lemon:writtenRep "debts"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+lexinfo:partOfSpeech rdfs:subPropertyOf lemon:property .
+
+<http://monnetproject.deri.ie/finance__en#Land+and+buildings> lemon:sense [ lemon:reference example:LandAndBuildings ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Land and buildings"@en ] ;
+  lemon:decomposition ( [ lexinfo:number lexinfo:plural ,lexinfo:singular ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Land> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#and> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#buildings> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#fixed> lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "fixed"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#VBN> .
+
+lexinfo:number rdfs:subPropertyOf lemon:property .
+
+<http://monnetproject.deri.ie/finance__en#Liquid+assets> lemon:sense [ lemon:reference example:LiquidAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Liquid assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Liquid> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#assets__6> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#Current+assets> lemon:sense [ lemon:reference example:CurrentAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Current assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Current> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#assets__3> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#buildings> lemon:form [ lemon:writtenRep "buildings"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#on__1> lemon:form [ lemon:writtenRep "on"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#IN> .
+
+<http://monnetproject.deri.ie/finance__en#payable__1> lemon:form [ lemon:writtenRep "payable"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#payable__2> lemon:form [ lemon:writtenRep "payable"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#Depreciation+on+intangible+and+tangible+fixed+assets> lemon:sense [ lemon:reference example:DepreciationOnIntangibleAndTangibleFixedAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Depreciation on intangible and tangible fixed assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:participle ;
+      lexinfo:aspect lexinfo:perfective ;
+      lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ,lexinfo:singular ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Depreciation> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#on> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#intangible> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#and__1> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#tangible> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#fixed> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#assets> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#Liquid> lemon:form [ lemon:writtenRep "liquid"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#forward> lemon:form [ lemon:writtenRep "forward"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adverb ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#RB> .
+
+lexinfo:degree rdfs:subPropertyOf lemon:property .
+
+<http://monnetproject.deri.ie/finance__en#intangible__1> lemon:form [ lemon:writtenRep "intangible"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#fixed__2> lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "fixed"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#VBN> .
+
+<http://monnetproject.deri.ie/finance__en#fixed__3> lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "fixed"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#VBN> .
+
+<http://monnetproject.deri.ie/finance__en#intangible> lemon:form [ lemon:writtenRep "intangible"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#on> lemon:form [ lemon:writtenRep "on"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#IN> .
+
+<http://monnetproject.deri.ie/finance__en#within> lemon:form [ lemon:writtenRep "within"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#IN> .
+
+<http://monnetproject.deri.ie/finance__en#Land> lemon:form [ lemon:writtenRep "land"@en ;
+    lexinfo:number lexinfo:singular ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NN> .
+
+<http://monnetproject.deri.ie/finance__en#Amounts> lemon:form [ lemon:writtenRep "amounts"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NNS> .
+
+<http://monnetproject.deri.ie/finance__en#Other+intangible+fixed+assets> lemon:sense [ lemon:reference example:OtherIntangibleFixedAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Other intangible fixed assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Other> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#intangible__1> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#fixed__2> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#assets__2> ]
+    ) .
+
+lexinfo:tense rdfs:subPropertyOf lemon:property .
+
+<http://monnetproject.deri.ie/finance__en#year__1> lemon:form [ lemon:writtenRep "year"@en ;
+    lexinfo:number lexinfo:singular ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NN> .
+
+<http://monnetproject.deri.ie/finance__en#year> lemon:form [ lemon:writtenRep "year"@en ;
+    lexinfo:number lexinfo:singular ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NN> .
+
+<http://monnetproject.deri.ie/finance__en#after> lemon:form [ lemon:writtenRep "after"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#IN> .
+
+<http://monnetproject.deri.ie/finance__en#Amounts+payable+after+more+than+one+year> lemon:sense [ lemon:reference example:AmountsPayableAfterMoreThanOneYear ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Amounts payable after more than one year"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ,lexinfo:comparative ;
+      lexinfo:number lexinfo:plural ,lexinfo:singular ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Amounts__1> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#payable__1> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#after> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#more> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#than> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#one__1> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#year__1> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#Amounts+payable> lemon:sense [ lemon:reference example:AmountsPayable ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Amounts payable"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Amounts__2> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#payable__2> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#one__1> lemon:form [ lemon:writtenRep "one"@en ] ;
+  lexinfo:partOfSpeech lexinfo:cardinalNumeral ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#CD> .
+
+lexinfo:verbFormMood rdfs:subPropertyOf lemon:property .
+
+<http://monnetproject.deri.ie/finance__en#Depreciation> lemon:form [ lemon:writtenRep "depreciation"@en ;
+    lexinfo:number lexinfo:singular ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#NN> .
+
+<http://monnetproject.deri.ie/finance__en#payable> lemon:form [ lemon:writtenRep "payable"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+
+<http://monnetproject.deri.ie/finance__en#Intangible+fixed+assets> lemon:sense [ lemon:reference example:IntangibleFixedAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Intangible fixed assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element <http://monnetproject.deri.ie/finance__en#Intangible> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#fixed__3> ]
+    [ lemon:element <http://monnetproject.deri.ie/finance__en#assets__5> ]
+    ) .
+
+<http://monnetproject.deri.ie/finance__en#Intangible> lemon:form [ lemon:writtenRep "intangible"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  <jar:eu.monnetproject.lemon.lela#posTag> <jar:eu.monnetproject.lemon.lela#JJ> .
+

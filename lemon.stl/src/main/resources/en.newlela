@@ -1,0 +1,94 @@
+Tree: (FRAG (VP{head}) (PP{_} (IN{prepositionalAdjunct.marker})))
+Semantics: owl:ObjectProperty, owl:DatatypeProperty, rdf:Property
+Frame: IntransitivePPFrame
+
+Tree: (VP (VB{head}) (NP))
+Semantics: owl:ObjectProperty, owl:DatatypeProperty, rdf:Property
+Frame: TransitiveFrame
+
+Tree: (VPZ)
+Semantics: owl:ObjectProperty, owl:DatatypeProperty, rdf:Property
+Frame: TransitiveFrame
+
+Tree: (SQ (VP (VBZ)))
+Semantics: owl:ObjectProperty, owl:DatatypeProperty, rdf:Property
+Frame: TransitiveFrame
+
+Tree: (VBP)
+Semantics: owl:ObjectProperty, owl:DatatypeProperty, rdf:Property
+Frame: TransitiveFrame
+
+Tree: (VBN)
+Semantics: owl:ObjectProperty, owl:DatatypeProperty, rdf:Property
+Frame: TransitiveFrame
+
+Tree: (VBG)
+Semantics: owl:Class, rdfs:Class
+Frame: IntransitiveFrame
+
+Tree: (VP (VB{head}) (NP))
+Semantics: owl:Class, rdfs:Class
+Frame: IntransitiveFrame
+
+Tree: (FRAG (NP{head}) (PP{_} (IN{prepositionalAdjunct.marker} "of")))
+Semantics: owl:ObjectProperty, owl:DatatypeProperty, rdf:Property
+Frame: NounPossesiveFrame
+
+
+Tree: (FRAG (NP{head}) (PP{_} (IN{prepositionalAdjunct.marker})))
+Semantics: owl:ObjectProperty, owl:DatatypeProperty, rdf:Property
+Frame: NounPPFrame
+
+Tree: (NP)
+Semantics: owl:ObjectProperty, owl:DatatypeProperty, rdf:Property
+Frame: NounPossesiveFrame
+
+Tree: (NN)
+Semantics: owl:ObjectProperty, owl:DatatypeProperty, rdf:Property
+Frame: NounPossesiveFrame
+
+Tree: (NP)
+Semantics: owl:Class, rdfs:Class
+Frame: NounPredicateFrame
+
+Tree: (NN)
+Semantics: owl:Class, rdfs:Class
+Frame: NounPredicateFrame
+
+Tree: (FRAG (NP) (NN))
+Semantics: owl:Class, rdfs:Class
+Frame: NounPredicateFrame
+
+Tree: (FRAG (ADJP) (PP{_} (IN "than")))
+Semantics: owl:ObjectProperty, rdf:Property
+Frame: AdjectiveComparativeFrame
+
+Tree: (FRAG (ADJP) (PP{_} (IN{prepositionalAdjunct.marker})))
+Semantics: owl:ObjectProperty, rdf:Property
+Frame: AdjectivePPFrame
+
+Tree: (JJR)
+Semantics: owl:ObjectProperty, rdf:Property
+Frame: AdjectiveComparativeFrame
+
+Tree: (JJ)
+Semantics: owl:Class, rdfs:Class
+Frame: AdjectivePredicativeFrame
+
+Tree: (ADJP)
+Semantics: owl:Class, rdfs:Class
+Frame: AdjectivePredicativeFrame
+
+Tree: (PP)
+Semantics: owl:Class, rdfs:Class
+Frame: AdjectivePredicativeFrame
+
+Tree: (PP (IN{head}) (NP{_}))
+Semantics: owl:ObjectProperty, owl:DatatypePropertym rdf:Property
+Frame: PrepositionalPhraseFrame
+
+Tree: (IN)
+Semantics: owl:ObjectProperty, owl:DatatypePropertym rdf:Property
+Frame: PrepositionalPhraseFrame
+
+

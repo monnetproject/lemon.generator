@@ -1,0 +1,16 @@
+eu.monnetproject.stemmer.snowball.TurkishSnowballStemmer
+eu.monnetproject.stemmer.snowball.SwedishSnowballStemmer
+eu.monnetproject.stemmer.snowball.SpanishSnowballStemmer
+eu.monnetproject.stemmer.snowball.RussianSnowballStemmer
+eu.monnetproject.stemmer.snowball.RomanianSnowballStemmer
+eu.monnetproject.stemmer.snowball.PortugueseSnowballStemmer
+eu.monnetproject.stemmer.snowball.NorwegianSnowballStemmer
+eu.monnetproject.stemmer.snowball.ItalianSnowballStemmer
+eu.monnetproject.stemmer.snowball.HungarianSnowballStemmer
+eu.monnetproject.stemmer.snowball.GermanSnowballStemmer
+eu.monnetproject.stemmer.snowball.FrenchSnowballStemmer
+eu.monnetproject.stemmer.snowball.FinnishSnowballStemmer
+eu.monnetproject.stemmer.snowball.EnglishSnowballStemmer
+eu.monnetproject.stemmer.snowball.DutchSnowballStemmer
+eu.monnetproject.stemmer.snowball.DanishSnowballStemmer
+eu.monnetproject.stemmer.german.GermanStemmer

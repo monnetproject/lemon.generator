@@ -1,0 +1,190 @@
+@prefix lemon: <http://www.monnet-project.eu/lemon#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lexinfoen: <http://www.lexinfo.net/ontology/2.0/lexinfo_en#> .
+@prefix pennbank: <http://www.monnet-project.eu/pennbank#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# Verbs
+
+# located in
+pennbank:FRAG [ lemon:edge pennbank:VP ,
+  pennbank:PP [ lemon:edge pennbank:IN [ lemon:edge ?preposition ] ] ] /
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property /
+lexinfo:IntransitivePPFrame /
+lemon:subjOfProp -> lexinfo:subject ,
+*, ?preposition,
+lemon:objOfProp -> lexinfo:prepositionalObject ( ?preposition ) .
+
+# closely related
+pennbank:VP / 
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property / 
+lexinfo:TransitiveFrame / 
+lemon:subjOfProp -> lexinfo:subject , *,
+lemon:objOfProp -> lexinfo:directObject .
+
+# eats
+pennbank:VBZ / 
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property / 
+lexinfo:TransitiveFrame / 
+lemon:subjOfProp -> lexinfo:subject , *,
+lemon:objOfProp -> lexinfo:directObject .
+
+# eats
+pennbank:SQ [ lemon:edge pennbank:VP [ lemon:edge pennbank:VBZ ] ] /
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property / 
+lexinfo:TransitiveFrame / 
+lemon:subjOfProp -> lexinfo:subject , *,
+lemon:objOfProp -> lexinfo:directObject .
+
+# eat
+pennbank:VBP / 
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property / 
+lexinfo:TransitiveFrame / 
+lemon:subjOfProp -> lexinfo:subject , *,
+lemon:objOfProp -> lexinfo:directObject .
+
+# ate
+pennbank:VBN / 
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property / 
+lexinfo:TransitiveFrame / 
+lemon:subjOfProp -> lexinfo:subject , *,
+lemon:objOfProp -> lexinfo:directObject .
+
+# Eating
+pennbank:VBG /
+owl:Class, rdfs:Class /
+lexinfo:IntransitiveFrame /
+lemon:isA -> lexinfo:subject, * .
+
+# Sleeps under the bridge
+pennbank:VP /
+owl:Class, rdfs:Class /
+lexinfo:IntransitiveFrame /
+lemon:isA -> lexinfo:subject, * .
+
+# Nouns
+
+# capital of
+pennbank:FRAG [ lemon:edge pennbank:NP , 
+ pennbank:PP [ lemon:edge pennbank:IN [ lemon:edge ?of("of") ] ] ] /
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property /
+lexinfo:NounPossesiveFrame /
+lemon:objOfProp -> lexinfo:subject ,
+lexinfoen:be , lexinfoen:the, *, lexinfoen:of, 
+lemon:subjOfProp -> lexinfo:possesiveAdjunct ( lexinfoen:of ) .
+
+# reason for
+pennbank:FRAG [ lemon:edge pennbank:NP , 
+ pennbank:PP [ lemon:edge pennbank:IN [ lemon:edge ?preposition ] ] ] /
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property /
+lexinfo:NounPPFrame /
+lemon:objOfProp -> lexinfo:subject ,
+lexinfoen:be , lexinfoen:the, *, ?preposition, 
+lemon:subjOfProp -> lexinfo:prepositionalAdjunct ( ?preposition ) .
+
+# state capital
+pennbank:NP /
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property /
+lexinfo:NounPossesiveFrame /
+lemon:objOfProp -> lexinfo:subject ,
+lexinfoen:be , lexinfoen:the, *, lexinfoen:of, 
+lemon:subjOfProp -> lexinfo:possesiveAdjunct ( lexinfoen:of ) .
+
+# capital
+pennbank:NN /
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property /
+lexinfo:NounPossesiveFrame /
+lemon:objOfProp -> lexinfo:subject ,
+lexinfoen:be , lexinfoen:the, *, lexinfoen:of, 
+lemon:subjOfProp -> lexinfo:possesiveAdjunct ( lexinfoen:of ) .
+
+# State Capital
+pennbank:NP /
+owl:Class, rdfs:Class /
+lexinfo:NounPredicateFrame /
+lemon:isA -> lexinfo:copulativeArg ,
+lexinfoen:be, lexinfoen:a, * .
+
+# Capital
+pennbank:NN /
+owl:Class, rdfs:Class /
+lexinfo:NounPredicateFrame /
+lemon:isA -> lexinfo:copulativeArg ,
+lexinfoen:be, lexinfoen:a, * .
+
+# Interest on assets
+pennbank:FRAG [ lemon:edge pennbank:NP ,
+  pennbank:PP ] /
+owl:Class, rdfs:Class /
+lexinfo:NounPredicateFrame /
+lemon:isA -> lexinfo:copulativeArg ,
+lexinfoen:be, lexinfoen:a, * .
+
+# Adjectives
+
+# bigger than
+pennbank:FRAG [ lemon:edge pennbank:ADJP ,
+  pennbank:PP [ lemon:edge pennbank:IN [ lemon:edge ?than("than") ] ] ] /
+owl:ObjectProperty, rdf:Property /
+lexinfo:AdjectiveComparativeFrame /
+lemon:subjOfProp -> lexinfo:copulativeSubject ,
+lexinfoen:be, * , lexinfoen:than ,
+lemon:objOfProp -> lexinfo:comparativeAdjunct ( lexinfoen:than ) .
+
+# relative to
+pennbank:FRAG [ lemon:edge pennbank:ADJP ,
+  pennbank:PP [ lemon:edge pennbank:IN [ lemon:edge ?preposition ] ] ] /
+owl:ObjectProperty, rdf:Property /
+lexinfo:AdjectivePPFrame /
+lemon:subjOfProp -> lexinfo:copulativeSubject ,
+lexinfoen:be, *, ?preposition,
+lemon:objOfProp -> lexinfo:prepositionalAdjunct ( ?preposition ) .
+  
+# bigger
+pennbank:JJR /
+owl:ObjectProperty, rdf:Property /
+lexinfo:AdjectiveComparativeFrame /
+lemon:subjOfProp -> lexinfo:copulativeSubject ,
+lexinfoen:be, * , lexinfoen:than ,
+lemon:objOfProp -> lexinfo:comparativeAdjunct ( lexinfoen:than ) .
+
+# Very Big
+pennbank:JJ /
+owl:Class, rdfs:Class /
+lexinfo:AdjectivePredicativeFrame /
+lemon:isA -> lexinfo:copulativeSubject ,
+lexinfoen:be, * .
+
+# Big
+pennbank:ADJP /
+owl:Class, rdfs:Class /
+lexinfo:AdjectivePredicativeFrame /
+lemon:isA -> lexinfo:copulativeSubject ,
+lexinfoen:be, * .
+
+# over 18
+pennbank:PP /
+owl:Class, rdfs:Class /
+lexinfo:AdjectivePredicativeFrame /
+lemon:isA -> lexinfo:copulativeSubject ,
+lexinfoen:be, * .
+
+# Preposition
+
+# in domain
+pennbank:PP /
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property /
+lexinfo:PrepositionalPhraseFrame /
+lemon:subjOfProp -> lexinfo:subject ,
+lexinfoen:be, *,
+lemon:objOfProp -> lexinfo:complement .
+
+# in
+pennbank:IN /
+owl:ObjectProperty, owl:DatatypeProperty, rdf:Property /
+lexinfo:PrepositionalPhraseFrame /
+lemon:subjOfProp -> lexinfo:subject ,
+lexinfoen:be, *,
+lemon:objOfProp -> lexinfo:complement .

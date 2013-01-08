@@ -1,0 +1,929 @@
+<api>
+<package name="eu.monnetproject.parser.stanford"
+>
+<class name="DepTreeWrap"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="eu.monnetproject.parser.TreeNode">
+</implements>
+<constructor name="DepTreeWrap"
+ type="eu.monnetproject.parser.stanford.DepTreeWrap"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="depList" type="java.util.Collection&lt;edu.stanford.nlp.trees.TypedDependency&gt;">
+</parameter>
+<parameter name="root" type="edu.stanford.nlp.trees.TreeGraphNode">
+</parameter>
+<parameter name="posSet" type="eu.monnetproject.parser.stanford.StanfordPOSSet">
+</parameter>
+</constructor>
+<method name="getChildren"
+ return="java.util.List&lt;eu.monnetproject.parser.TreeNode.Child&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getScore"
+ return="double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTag"
+ return="eu.monnetproject.pos.POSTag"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getToken"
+ return="eu.monnetproject.tokenizer.Token"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isLeaf"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="StanfordInstaller"
+ extends="eu.monnetproject.osgi.installer.Installer"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="StanfordInstaller"
+ type="eu.monnetproject.parser.stanford.StanfordInstaller"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="activate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="org.osgi.framework.BundleContext">
+</parameter>
+</method>
+<method name="deactivate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getContext"
+ return="org.osgi.framework.BundleContext"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="newService"
+ return="eu.monnetproject.parser.Parser"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="artifact" type="java.io.File">
+</parameter>
+</method>
+<method name="newService"
+ return="eu.monnetproject.parser.Parser"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="string" type="java.lang.String">
+</parameter>
+<parameter name="bundle" type="org.osgi.framework.Bundle">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</class>
+<class name="StanfordPOSSet"
+ extends="java.util.AbstractCollection"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="eu.monnetproject.pos.POSSet">
+</implements>
+<constructor name="StanfordPOSSet"
+ type="eu.monnetproject.parser.stanford.StanfordPOSSet"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tlp" type="edu.stanford.nlp.trees.TreebankLanguagePack">
+</parameter>
+</constructor>
+<method name="getPOS"
+ return="eu.monnetproject.pos.POS"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="getPOSSetID"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="iterator"
+ return="java.util.Iterator&lt;eu.monnetproject.pos.POS&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="size"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="StanfordPOSTag"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="eu.monnetproject.pos.POSTag">
+</implements>
+<constructor name="StanfordPOSTag"
+ type="eu.monnetproject.parser.stanford.StanfordPOSTag"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="pos" type="eu.monnetproject.pos.POS">
+</parameter>
+</constructor>
+<method name="getPOS"
+ return="eu.monnetproject.pos.POS"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSynProps"
+ return="java.util.Collection&lt;eu.monnetproject.pos.SynPair&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="StanfordParser"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="eu.monnetproject.parser.Parser">
+</implements>
+<constructor name="StanfordParser"
+ type="eu.monnetproject.parser.stanford.StanfordParser"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fileName" type="java.io.File">
+</parameter>
+</constructor>
+<method name="bestParses"
+ return="java.util.List&lt;eu.monnetproject.parser.TreeNode&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tokens" type="java.lang.Iterable&lt;eu.monnetproject.tokenizer.Token&gt;">
+</parameter>
+<parameter name="k" type="int">
+</parameter>
+</method>
+<method name="depParse"
+ return="eu.monnetproject.parser.TreeNode"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tokens" type="java.lang.Iterable&lt;eu.monnetproject.tokenizer.Token&gt;">
+</parameter>
+</method>
+<method name="getLanguage"
+ return="eu.monnetproject.lang.Language"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTagSet"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="parse"
+ return="eu.monnetproject.parser.TreeNode"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tokens" type="java.lang.Iterable&lt;eu.monnetproject.tokenizer.Token&gt;">
+</parameter>
+</method>
+</class>
+<class name="TreeNodeWrap"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="eu.monnetproject.parser.TreeNode">
+</implements>
+<constructor name="TreeNodeWrap"
+ type="eu.monnetproject.parser.stanford.TreeNodeWrap"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tree" type="edu.stanford.nlp.trees.Tree">
+</parameter>
+<parameter name="posSet" type="eu.monnetproject.parser.stanford.StanfordPOSSet">
+</parameter>
+<parameter name="tokens" type="java.util.List&lt;eu.monnetproject.tokenizer.Token&gt;">
+</parameter>
+<parameter name="leafCountOffset" type="int">
+</parameter>
+</constructor>
+<constructor name="TreeNodeWrap"
+ type="eu.monnetproject.parser.stanford.TreeNodeWrap"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tree" type="edu.stanford.nlp.trees.Tree">
+</parameter>
+<parameter name="posSet" type="eu.monnetproject.parser.stanford.StanfordPOSSet">
+</parameter>
+<parameter name="tokens" type="java.util.List&lt;eu.monnetproject.tokenizer.Token&gt;">
+</parameter>
+<parameter name="leafCountOffset" type="int">
+</parameter>
+<parameter name="score" type="double">
+</parameter>
+</constructor>
+<method name="getChildren"
+ return="java.util.List&lt;eu.monnetproject.parser.TreeNode.Child&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getScore"
+ return="double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTag"
+ return="eu.monnetproject.pos.POSTag"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getToken"
+ return="eu.monnetproject.tokenizer.Token"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isLeaf"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="eu.monnetproject.splitter.stanford"
+>
+<class name="StanfordSplitter"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="StanfordSplitter"
+ type="eu.monnetproject.splitter.stanford.StanfordSplitter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="bindTokenizer"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tokenizer" type="eu.monnetproject.tokenizer.Tokenizer">
+</parameter>
+</method>
+<method name="split"
+ return="java.util.List&lt;eu.monnetproject.sentence.Sentence&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="string" type="java.lang.String">
+</parameter>
+</method>
+</class>
+</package>
+<package name="eu.monnetproject.stanford.modules"
+>
+<class name="StanfordModule"
+ extends="com.google.inject.AbstractModule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="StanfordModule"
+ type="eu.monnetproject.stanford.modules.StanfordModule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="configure"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="eu.monnetproject.tagger.stanford"
+>
+<interface name="PropertyGetter"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getProperty"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="propName" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class name="StanfordEnglishLemmatizer"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="StanfordEnglishLemmatizer"
+ type="eu.monnetproject.tagger.stanford.StanfordEnglishLemmatizer"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getLanguage"
+ return="eu.monnetproject.lang.Language"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="stem"
+ return="eu.monnetproject.morph.StemmerResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="token" type="eu.monnetproject.tagger.POSToken">
+</parameter>
+</method>
+<method name="stem"
+ return="eu.monnetproject.morph.StemmerResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+<parameter name="word" type="java.lang.String">
+</parameter>
+<parameter name="tag" type="eu.monnetproject.pos.POSTag">
+</parameter>
+</method>
+</class>
+<class name="StanfordInstaller"
+ extends="eu.monnetproject.osgi.installer.Installer"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="StanfordInstaller"
+ type="eu.monnetproject.tagger.stanford.StanfordInstaller"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="activate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="org.osgi.framework.BundleContext">
+</parameter>
+</method>
+<method name="deactivate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getContext"
+ return="org.osgi.framework.BundleContext"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="newService"
+ return="eu.monnetproject.tagger.Tagger"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="artifact" type="java.io.File">
+</parameter>
+</method>
+<method name="newService"
+ return="eu.monnetproject.tagger.Tagger"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="string" type="java.lang.String">
+</parameter>
+<parameter name="bundle" type="org.osgi.framework.Bundle">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</class>
+<class name="StanfordPOSSet"
+ extends="java.util.AbstractCollection"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="eu.monnetproject.pos.POSSet">
+</implements>
+<constructor name="StanfordPOSSet"
+ type="eu.monnetproject.tagger.stanford.StanfordPOSSet"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tags" type="edu.stanford.nlp.tagger.maxent.TTags">
+</parameter>
+</constructor>
+<method name="getPOS"
+ return="eu.monnetproject.pos.POS"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="getPOSSetID"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="iterator"
+ return="java.util.Iterator&lt;eu.monnetproject.pos.POS&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="size"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="StanfordPOSTag"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="eu.monnetproject.pos.POSTag">
+</implements>
+<constructor name="StanfordPOSTag"
+ type="eu.monnetproject.tagger.stanford.StanfordPOSTag"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="pos" type="eu.monnetproject.pos.POS">
+</parameter>
+</constructor>
+<method name="getPOS"
+ return="eu.monnetproject.pos.POS"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSynProps"
+ return="java.util.Collection&lt;eu.monnetproject.pos.SynPair&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="StanfordTagger"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="eu.monnetproject.tagger.Tagger">
+</implements>
+<constructor name="StanfordTagger"
+ type="eu.monnetproject.tagger.stanford.StanfordTagger"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="modelFile" type="java.io.File">
+</parameter>
+</constructor>
+<method name="getLanguage"
+ return="eu.monnetproject.lang.Language"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTagSet"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="tag"
+ return="java.util.List&lt;eu.monnetproject.tagger.POSToken&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tokens" type="java.util.List&lt;eu.monnetproject.tokenizer.Token&gt;">
+</parameter>
+</method>
+</class>
+<class name="StanfordTaggerAnnotator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="StanfordTaggerAnnotator"
+ type="eu.monnetproject.tagger.stanford.StanfordTaggerAnnotator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
+</package>
+<package name="eu.monnetproject.tokenizer.stanford"
+>
+<class name="StanfordTokenizer"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="eu.monnetproject.tokenizer.Tokenizer">
+</implements>
+<constructor name="StanfordTokenizer"
+ type="eu.monnetproject.tokenizer.stanford.StanfordTokenizer"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getScript"
+ return="eu.monnetproject.lang.Script"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="tokenize"
+ return="java.util.List&lt;eu.monnetproject.tokenizer.Token&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="string" type="java.lang.String">
+</parameter>
+</method>
+</class>
+</package>
+</api>

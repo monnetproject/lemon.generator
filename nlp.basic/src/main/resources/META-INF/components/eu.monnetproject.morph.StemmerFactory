@@ -1,0 +1,2 @@
+eu.monnetproject.stemmer.snowball.SnowballStemmerFactory
+eu.monnetproject.stemmer.german.GermanStemmerFactory

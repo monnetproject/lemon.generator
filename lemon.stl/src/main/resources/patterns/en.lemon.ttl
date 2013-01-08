@@ -1,0 +1,39 @@
+@prefix lemon: <http://www.monnet-project.eu/lemon#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://monnetproject.deri.ie/lemonsource/patterns/en#> .
+
+:noun a lemon:MorphPattern ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:transform [
+    lemon:generates [
+      lexinfo:number lexinfo:plural
+    ] ;
+    lemon:rule "~(?<![^aeiou]y|s|o|sh)/~s" , "~(?<=[^aeiou])y/~ies" , "~(?<=s|o|sh)/~es" 
+  ] .
+
+:regularVerb a lemon:MorphPattern ; 
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:transform [
+    lemon:generates [
+      lexinfo:person lexinfo:thirdPerson ;
+      lexinfo:number lexinfo:plural ;
+      lexinfo:tense lexinfo:present ;
+      lexinfo:verbFormMood lexinfo:indicative ] ;
+    lemon:rule "~(?<!s|o|sh)/~s" ,  "~(?<=s|o|sh)/~es" 
+  ] ;
+  lemon:transform [
+    lemon:generates 
+    [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:indicative ] ,
+    [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:participle ] ;
+    lemon:rule "~(?<!e)/~ed", "~(?<=e)/~d"
+  ] .
+
+lexinfo:partOfSpeech rdfs:subPropertyOf lemon:property .
+lexinfo:number rdfs:subPropertyOf lemon:property .
+lexinfo:person rdfs:subPropertyOf lemon:property .
+lexinfo:tense rdfs:subPropertyOf lemon:property .
+lexinfo:verbFormMood rdfs:subPropertyOf lemon:property .
+  

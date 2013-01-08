@@ -1,0 +1,480 @@
+@prefix yago: <http://dbpedia.org/class/yago/>.
+@prefix nci: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>.
+@prefix example: <http://nlp.deri.ie/ontologies/finance/example#>.
+@prefix xslwd: <http://www.w3.org/TR/WD-xsl>.
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>.
+@prefix mesh: <http://purl.org/commons/record/mesh/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix sc: <http://purl.org/science/owl/sciencecommons/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dawgt: <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix protseq: <http://purl.org/science/protein/bysequence/>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix rdfdf: <http://www.openlinksw.com/virtrdf-data-formats#>.
+@prefix obo: <http://www.geneontology.org/formats/oboInOwl#>.
+@prefix xsl10: <http://www.w3.org/XSL/Transform/1.0>.
+@prefix dbpprop: <http://dbpedia.org/property/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#>.
+@prefix bif: <bif:>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>.
+@prefix dbpedia: <http://dbpedia.org/resource/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix xsl1999: <http://www.w3.org/1999/XSL/Transform>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix virtrdf: <http://www.openlinksw.com/schemas/virtrdf#>.
+@prefix scovo: <http://purl.org/NET/scovo#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix sql: <sql:>.
+@prefix lemon: <http://www.monnet-project.eu/lemon#>.
+@prefix go: <http://purl.org/obo/owl/GO#>.
+@prefix xf: <http://www.w3.org/2004/07/xpath-functions>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix ex: <http://monnet-project.eu/lexica/finance__en#>.
+
+:Current lemon:form [ lemon:writtenRep "current"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+    lela:posTag lela:JJ .
+
+:than lemon:form [ lemon:writtenRep "than"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+    lela:posTag lela:IN .
+
+:financial__1 lemon:form [ lemon:writtenRep "financial"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+    lela:posTag lela:JJ .
+
+:Amounts+payable+within+one+year lemon:sense [ lemon:reference example:AmountsPayableWithinOneYear ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Amounts payable within one year"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ,lexinfo:singular ;
+      lemon:element :Amounts ]
+    [ lemon:element :payable ]
+    [ lemon:element :within ]
+    [ lemon:element :one ]
+    [ lemon:element :year ]
+    ) .
+
+:Interest lemon:form [ lemon:writtenRep "interest"@en ;
+    lexinfo:number lexinfo:singular ] ;
+    lela:posTag lela:NN .
+
+:Financial+fixed+assets lemon:sense [ lemon:reference example:FinancialFixedAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Financial fixed assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element :Financial ]
+    [ lemon:element :fixed__1 ]
+    [ lemon:element :assets__1 ]
+    ) .
+
+:more lemon:form [ lemon:writtenRep "more"@en ;
+    lexinfo:degree lexinfo:comparative ] ;
+  lexinfo:partOfSpeech lexinfo:adverb ;
+    lela:posTag lela:RBR .
+
+:lexicon rdf:type lemon:Lexicon ;
+  lemon:entry :year__1 ,:brought ,:Current ,
+    :than ,:financial__1 ,:year ,
+    :Land+and+buildings ,:fixed ,:Financial ,
+    :after ,:assets__7 ,:Liquid+assets ,
+    :Amounts+payable+within+one+year ,:Current+assets ,:Amounts+payable+after+more+than+one+year ,
+    :assets__5 ,:Profit+%28loss%29+brought+forward ,:assets__6 ,
+    :Interest ,:Profit ,:buildings ,
+    :fixed__1 ,:Other+financial+assets ,:Financial+fixed+assets ,
+    :on__1 ,:more ,:Fixed ,
+    :payable__1 ,:Interest+paid+on+financial+debts ,:payable__2 ,
+    :assets__4 ,:assets__3 ,:Other ,
+    :assets__2 ,:assets__1 ,:Depreciation+on+intangible+and+tangible+fixed+assets ,
+    :Amounts+payable ,:Liquid ,:forward ,
+    :tangible ,:Fixed+assets ,:Assets ,
+    :one__1 ,:Depreciation ,:loss ,
+    :payable ,:intangible__1 ,:Intangible+fixed+assets ,
+    :assets ,:fixed__2 ,:Amounts__1 ,
+    :fixed__3 ,:Amounts__2 ,:intangible ,
+    :within ,:on ,:Land ,
+    :paid ,:Other__1 ,:Amounts ,
+    :and ,:Intangible ,:and__1 ,
+    :one ,:financial ,:debts ,
+    :Other+intangible+fixed+assets ;
+  lemon:language "en" .
+
+:loss lemon:form [ lemon:writtenRep "loss"@en ;
+    lexinfo:number lexinfo:singular ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NN .
+
+:Amounts__1 lemon:form [ lemon:writtenRep "amounts"@en ;
+    lexinfo:number lexinfo:plural ] ;
+    lela:posTag lela:NNS .
+
+:Amounts__2 lemon:form [ lemon:writtenRep "amounts"@en ;
+    lexinfo:number lexinfo:plural ] ;
+    lela:posTag lela:NNS .
+
+:paid lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "paid"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+    lela:posTag lela:VBN .
+
+:Other__1 lemon:form [ lemon:writtenRep "other"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+    lela:posTag lela:JJ .
+
+:and__1 lemon:form [ lemon:writtenRep "and"@en ] ;
+  lexinfo:partOfSpeech lexinfo:conjunction ;
+    lela:posTag lela:CC .
+
+:one lemon:form [ lemon:writtenRep "one"@en ] ;
+  lexinfo:partOfSpeech lexinfo:cardinalNumeral ;
+    lela:posTag lela:CD .
+
+:financial lemon:form [ lemon:writtenRep "financial"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+    lela:posTag lela:JJ .
+
+:brought lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "brought"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+    lela:posTag lela:VBN .
+
+:Financial lemon:form [ lemon:writtenRep "financial"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+    lela:posTag lela:JJ .
+
+:assets__7 lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+:assets__5 lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+:Profit+%28loss%29+brought+forward lemon:sense [ lemon:reference example:ProfitLossBroughtForward ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Profit (loss) brought forward"@en ] ;
+  lemon:decomposition ( [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:indicative ;
+      lexinfo:aspect lexinfo:perfective ;
+      lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:singular ;
+      lemon:element :Profit ]
+    [ lemon:element :loss ]
+    [ lemon:element :brought ]
+    [ lemon:element :forward ]
+    ) .
+
+:assets__6 lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+:Profit lemon:form [ lemon:writtenRep "profit"@en ;
+    lexinfo:number lexinfo:singular ] ;
+    lela:posTag lela:NN .
+
+lexinfo:aspect rdfs:subPropertyOf lemon:property .
+
+:fixed__1 lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "fixed"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+    lela:posTag lela:VBN .
+
+:Other+financial+assets lemon:sense [ lemon:reference example:OtherFinancialAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Other financial assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element :Other__1 ]
+    [ lemon:element :financial__1 ]
+    [ lemon:element :assets__4 ]
+    ) .
+
+:Fixed lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "fixed"@en ] ;
+    lela:posTag lela:VBN .
+
+:Interest+paid+on+financial+debts lemon:sense [ lemon:reference example:InterestPaidOnFinancialDebts ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Interest paid on financial debts"@en ] ;
+  lemon:decomposition ( [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:participle ;
+      lexinfo:aspect lexinfo:perfective ;
+      lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ,lexinfo:singular ;
+      lemon:element :Interest ]
+    [ lemon:element :paid ]
+    [ lemon:element :on__1 ]
+    [ lemon:element :financial ]
+    [ lemon:element :debts ]
+    ) .
+
+:assets__4 lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+:assets__3 lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+:Other lemon:form [ lemon:writtenRep "other"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+    lela:posTag lela:JJ .
+
+:assets__2 lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+:assets__1 lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+:tangible lemon:form [ lemon:writtenRep "tangible"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+    lela:posTag lela:JJ .
+
+:Fixed+assets lemon:sense [ lemon:reference example:FixedAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Fixed assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:participle ;
+      lexinfo:aspect lexinfo:perfective ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element :Fixed ]
+    [ lemon:element :assets__7 ]
+    ) .
+
+:Assets lemon:sense [ lemon:reference example:Assets ] ;
+  lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+:assets lemon:form [ lemon:writtenRep "assets"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+lela:posTag rdfs:subPropertyOf lemon:property .
+
+:and lemon:form [ lemon:writtenRep "and"@en ] ;
+  lexinfo:partOfSpeech lexinfo:conjunction ;
+    lela:posTag lela:CC .
+
+:debts lemon:form [ lemon:writtenRep "debts"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+lexinfo:partOfSpeech rdfs:subPropertyOf lemon:property .
+
+:Land+and+buildings lemon:sense [ lemon:reference example:LandAndBuildings ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Land and buildings"@en ] ;
+  lemon:decomposition ( [ lexinfo:number lexinfo:plural ,lexinfo:singular ;
+      lemon:element :Land ]
+    [ lemon:element :and ]
+    [ lemon:element :buildings ]
+    ) .
+
+:fixed lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "fixed"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+    lela:posTag lela:VBN .
+
+lexinfo:number rdfs:subPropertyOf lemon:property .
+
+:Liquid+assets lemon:sense [ lemon:reference example:LiquidAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Liquid assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element :Liquid ]
+    [ lemon:element :assets__6 ]
+    ) .
+
+:Current+assets lemon:sense [ lemon:reference example:CurrentAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Current assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element :Current ]
+    [ lemon:element :assets__3 ]
+    ) .
+
+:buildings lemon:form [ lemon:writtenRep "buildings"@en ;
+    lexinfo:number lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NNS .
+
+:on__1 lemon:form [ lemon:writtenRep "on"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+    lela:posTag lela:IN .
+
+:payable__1 lemon:form [ lemon:writtenRep "payable"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+    lela:posTag lela:JJ .
+
+:payable__2 lemon:form [ lemon:writtenRep "payable"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+    lela:posTag lela:JJ .
+
+:Depreciation+on+intangible+and+tangible+fixed+assets lemon:sense [ lemon:reference example:DepreciationOnIntangibleAndTangibleFixedAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Depreciation on intangible and tangible fixed assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:tense lexinfo:past ;
+      lexinfo:verbFormMood lexinfo:participle ;
+      lexinfo:aspect lexinfo:perfective ;
+      lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ,lexinfo:singular ;
+      lemon:element :Depreciation ]
+    [ lemon:element :on ]
+    [ lemon:element :intangible ]
+    [ lemon:element :and__1 ]
+    [ lemon:element :tangible ]
+    [ lemon:element :fixed ]
+    [ lemon:element :assets ]
+    ) .
+
+:Liquid lemon:form [ lemon:writtenRep "liquid"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+    lela:posTag lela:JJ .
+
+:forward lemon:form [ lemon:writtenRep "forward"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adverb ;
+    lela:posTag lela:RB .
+
+lexinfo:degree rdfs:subPropertyOf lemon:property .
+
+:intangible__1 lemon:form [ lemon:writtenRep "intangible"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+    lela:posTag lela:JJ .
+
+:fixed__2 lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "fixed"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+    lela:posTag lela:VBN .
+
+:fixed__3 lemon:form [ lexinfo:tense lexinfo:past ;
+    lexinfo:verbFormMood lexinfo:participle ;
+    lexinfo:aspect lexinfo:perfective ;
+    lemon:writtenRep "fixed"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+    lela:posTag lela:VBN .
+
+:intangible lemon:form [ lemon:writtenRep "intangible"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+    lela:posTag lela:JJ .
+
+:on lemon:form [ lemon:writtenRep "on"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+    lela:posTag lela:IN .
+
+:within lemon:form [ lemon:writtenRep "within"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+    lela:posTag lela:IN .
+
+:Land lemon:form [ lemon:writtenRep "land"@en ;
+    lexinfo:number lexinfo:singular ] ;
+    lela:posTag lela:NN .
+
+:Amounts lemon:form [ lemon:writtenRep "amounts"@en ;
+    lexinfo:number lexinfo:plural ] ;
+    lela:posTag lela:NNS .
+
+:Other+intangible+fixed+assets lemon:sense [ lemon:reference example:OtherIntangibleFixedAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Other intangible fixed assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element :Other ]
+    [ lemon:element :intangible__1 ]
+    [ lemon:element :fixed__2 ]
+    [ lemon:element :assets__2 ]
+    ) .
+
+lexinfo:tense rdfs:subPropertyOf lemon:property .
+
+:year__1 lemon:form [ lemon:writtenRep "year"@en ;
+    lexinfo:number lexinfo:singular ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NN .
+
+:year lemon:form [ lemon:writtenRep "year"@en ;
+    lexinfo:number lexinfo:singular ] ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+    lela:posTag lela:NN .
+
+:after lemon:form [ lemon:writtenRep "after"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+    lela:posTag lela:IN .
+
+:Amounts+payable+after+more+than+one+year lemon:sense [ lemon:reference example:AmountsPayableAfterMoreThanOneYear ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Amounts payable after more than one year"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ,lexinfo:comparative ;
+      lexinfo:number lexinfo:plural ,lexinfo:singular ;
+      lemon:element :Amounts__1 ]
+    [ lemon:element :payable__1 ]
+    [ lemon:element :after ]
+    [ lemon:element :more ]
+    [ lemon:element :than ]
+    [ lemon:element :one__1 ]
+    [ lemon:element :year__1 ]
+    ) .
+
+:Amounts+payable lemon:sense [ lemon:reference example:AmountsPayable ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Amounts payable"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element :Amounts__2 ]
+    [ lemon:element :payable__2 ]
+    ) .
+
+:one__1 lemon:form [ lemon:writtenRep "one"@en ] ;
+  lexinfo:partOfSpeech lexinfo:cardinalNumeral ;
+    lela:posTag lela:CD .
+
+lexinfo:verbFormMood rdfs:subPropertyOf lemon:property .
+
+:Depreciation lemon:form [ lemon:writtenRep "depreciation"@en ;
+    lexinfo:number lexinfo:singular ] ;
+    lela:posTag lela:NN .
+
+:payable lemon:form [ lemon:writtenRep "payable"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+    lela:posTag lela:JJ .
+
+:Intangible+fixed+assets lemon:sense [ lemon:reference example:IntangibleFixedAssets ] ;
+  lemon:canonicalForm [ lemon:writtenRep "Intangible fixed assets"@en ] ;
+  lemon:decomposition ( [ lexinfo:degree lexinfo:positive ;
+      lexinfo:number lexinfo:plural ;
+      lemon:element :Intangible ]
+    [ lemon:element :fixed__3 ]
+    [ lemon:element :assets__5 ]
+    ) .
+
+:Intangible lemon:form [ lemon:writtenRep "intangible"@en ;
+    lexinfo:degree lexinfo:positive ] ;
+    lela:posTag lela:JJ .
+

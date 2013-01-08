@@ -1,0 +1,7 @@
+eu.monnetproject.lemon.generator.lela.MergeActor
+eu.monnetproject.lemon.generator.lela.ParserActor
+eu.monnetproject.lemon.generator.lela.StemmerActor
+eu.monnetproject.lemon.generator.lela.TaggerActor
+eu.monnetproject.lemon.generator.lela.TokenizerActor
+eu.monnetproject.lemon.generator.lela.MorphPatternActor
+eu.monnetproject.lemon.generator.lela.NewCategorizerActor

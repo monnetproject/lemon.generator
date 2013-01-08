@@ -1,0 +1,4 @@
+eu.monnetproject.lemon.generator.xmlrpc.LemonModelConverter
+eu.monnetproject.lemon.generator.xmlrpc.OntologyConverter
+eu.monnetproject.lemon.generator.xmlrpc.LexiconTypeConverter
+eu.monnetproject.lemon.generator.xmlrpc.LemonGeneratorConfigConverter

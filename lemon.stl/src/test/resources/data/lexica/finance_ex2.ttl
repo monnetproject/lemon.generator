@@ -1,0 +1,33 @@
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix lemon: <http://www.monnet-project.eu/lemon#>.
+@prefix ex: <http://www.monnetproject.eu/lexica/ex/finance/ex1#>.
+@prefix xebr: <http://www.monnet-project.eu/xebr#>.
+
+ex:myLexicon lemon:entry ex:Assets, ex:FinancialAssets, ex:ProfitOrLoss, ex:FinancialAssetsAtFairValueThroughProfitOrLoss,ex:AssetsLiabilities,ex:BasicEarningsLossPerShare;
+	lemon:language "en";
+	a lemon:Lexicon.
+
+ex:Assets a lemon:LexicalEntry;
+  lemon:form [lemon:writtenRep "Assets"@en];
+  lemon:sense [lemon:reference <http://dbpedia.org/resource/Assets>].
+
+ex:FinancialAssets a lemon:LexicalEntry;
+  lemon:form [lemon:writtenRep "financial assets"@en];
+  lemon:sense [lemon:reference xebr:FinancialAssets].
+                  
+ex:ProfitOrLoss a lemon:LexicalEntry;
+  lemon:form [lemon:writtenRep "profit or loss"@en];
+  lemon:sense [lemon:reference xebr:ProfitOrLoss].
+                  
+ex:FinancialAssetsAtFairValueThroughProfitOrLoss a lemon:LexicalEntry;
+  lemon:form [lemon:writtenRep "Financial assets at fair value through profit or loss"@en];
+  lemon:sense [lemon:reference xebr:FinancialAssetsAtFairValueThroughProfitOrLoss].
+
+ex:AssetsLiabilities a lemon:LexicalEntry;
+  lemon:form [lemon:writtenRep "Assets (liabilities)"@en];
+  lemon:sense [lemon:reference xebr:AssetsLiabilities].
+
+ex:BasicEarningsLossPerShare a lemon:LexicalEntry;
+  lemon:form [lemon:writtenRep "Basic earnings (loss) per share"@en];
+  lemon:sense [lemon:reference xebr:BasicEarningsLossPerShare]. 

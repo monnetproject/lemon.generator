@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://nlp.deri.ie/ontologies/finance/example#> .
+
+:Assets a owl:Class ;
+	rdfs:label "Assets"@en .
+
+:CurrentAssets a owl:Class ;
+	rdfs:label "Current assets"@en .
+	
+:DepreciationOnIntangibleAndTangibleFixedAssets a owl:Class ;
+	rdfs:label "Depreciation on intangible and tangible fixed assets"@en .
+	
+:AmountsPayable a owl:Class ;
+	rdfs:label "Amounts payable"@en .
+	
+:AmountsPayableAfterMoreThanOneYear a owl:Class ;
+	rdfs:label "Amounts payable after more than one year"@en .
+	
+:AmountsPayableWithinOneYear a owl:Class ;
+	rdfs:label "Amounts payable within one year"@en .
+	
+:InterestPaidOnFinancialDebts a owl:Class ;
+	rdfs:label "Interest paid on financial debts"@en .
+	
+:LandAndBuildings a owl:Class ;
+	rdfs:label "Land and buildings"@en .
+	
+:FinancialFixedAssets a owl:Class ;
+	rdfs:label "Financial fixed assets"@en .
+	
+:FixedAssets a owl:Class ;
+	rdfs:label "Fixed assets"@en .
+	
+:IntangibleFixedAssets a owl:Class ;
+	rdfs:label "Intangible fixed assets"@en .
+	
+:LiquidAssets a owl:Class ;
+	rdfs:label "Liquid assets"@en .
+	
+:OtherFinancialAssets a owl:Class ;
+	rdfs:label "Other financial assets"@en .
+	
+:OtherIntangibleFixedAssets a owl:Class ;
+	rdfs:label "Other intangible fixed assets"@en .
+	
+:ProfitLossBroughtForward a owl:Class ;
+	rdfs:label "Profit (loss) brought forward"@en .
+	
+:CashFlowsFromUsedInInvestingActivities
+	rdfs:label "Cash flows from (used in) investing activities"@en .

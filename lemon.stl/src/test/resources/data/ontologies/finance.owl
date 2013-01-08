@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#Assets">
+		<rdfs:label xml:lang="en">Assets</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#CurrentAssets">
+		<rdfs:label xml:lang="en">Current assets</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#DepreciationOnIntangibleAndTangibleFixedAssets">
+		<rdfs:label xml:lang="en">Depreciation on intangible and tangible fixed assets</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#AmountsPayable">
+		<rdfs:label xml:lang="en">Amounts payable</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#AmountsPayableAfterMoreThanOneYear">
+		<rdfs:label xml:lang="en">Amounts payable after more than one year</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#AmountsPayableWithinOneYear">
+		<rdfs:label xml:lang="en">Amounts payable within one year</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#InterestPaidOnFinancialDebts">
+		<rdfs:label xml:lang="en">Interest paid on financial debts</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#LandAndBuildings">
+		<rdfs:label xml:lang="en">Land and buildings</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#FinancialFixedAssets">
+		<rdfs:label xml:lang="en">Financial fixed assets</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#FixedAssets">
+		<rdfs:label xml:lang="en">Fixed assets</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#IntangibleFixedAssets">
+		<rdfs:label xml:lang="en">Intangible fixed assets</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#LiquidAssets">
+		<rdfs:label xml:lang="en">Liquid assets</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#OtherFinancialAssets">
+		<rdfs:label xml:lang="en">Other financial assets</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#OtherIntangibleFixedAssets">
+		<rdfs:label xml:lang="en">Other intangible fixed assets</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://nlp.deri.ie/ontologies/finance/example#ProfitLossBroughtForward">
+		<rdfs:label xml:lang="en">Profit (loss) brought forward</rdfs:label>
+	</owl:Class>
+	<rdf:Description rdf:about="http://nlp.deri.ie/ontologies/finance/example#CashFlowsFromUsedInInvestingActivities">
+		<rdfs:label xml:lang="en">Cash flows from (used in) investing activities</rdfs:label>
+	</rdf:Description>
+</rdf:RDF>
