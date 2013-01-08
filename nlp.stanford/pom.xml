@@ -8,10 +8,10 @@
         <version>1.13.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
-    <artifactId>nlp.stanford</artifactId>
+    <artifactId>lemon.generator.nlp.stanford</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.nlp.stanford OSGi Bundle</name>
+    <name>eu.monnetproject.lemon.generator.nlp.stanford OSGi Bundle</name>
 
     <repositories>
         <repository>

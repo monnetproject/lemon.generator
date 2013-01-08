@@ -5,19 +5,19 @@
 
     <parent>
         <groupId>eu.monnetproject</groupId>
-        <artifactId>project</artifactId>
+        <artifactId>lemon.generator.project</artifactId>
         <version>1.13.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
     
-    <artifactId>nlp.core</artifactId>
+    <artifactId>lemon.generator.nlp.core</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.nlp.core OSGi Bundle</name>
+    <name>eu.monnetproject.lemon.generator.nlp.core OSGi Bundle</name>
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>framework.lang</artifactId>
+            <artifactId>language</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -27,7 +27,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>framework.util</artifactId>
+            <artifactId>lemon.generator.util</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

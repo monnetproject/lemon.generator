@@ -8,10 +8,10 @@
     </parent>
 
     <groupId>eu.monnetproject</groupId>
-    <artifactId>lemon.stl.web</artifactId>
+    <artifactId>lemon.generator.stl.web</artifactId>
     <packaging>war</packaging>
 
-    <name>eu.monnetproject.lemon.stl.web</name>
+    <name>eu.monnetproject.lemon.generator.stl.web</name>
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>

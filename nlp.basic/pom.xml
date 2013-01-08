@@ -4,14 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>eu.monnetproject</groupId>
-		<artifactId>project</artifactId>
+		<artifactId>lemon.generator.project</artifactId>
 		<version>1.13.1-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
-	<artifactId>nlp.basic</artifactId>
+	<artifactId>lemon.generator.nlp.basic</artifactId>
 	<packaging>bundle</packaging>
 
-	<name>eu.monnetproject.nlp.basic OSGi Bundle</name>
+	<name>eu.monnetproject.lemon.generator.nlp.basic OSGi Bundle</name>
 
 	<dependencies>
 		<dependency>
@@ -22,7 +22,7 @@
 		</dependency>
 		<dependency>
 			<groupId>eu.monnetproject</groupId>
-			<artifactId>nlp.core</artifactId>
+			<artifactId>lemon.generator.nlp.core</artifactId>
 			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
