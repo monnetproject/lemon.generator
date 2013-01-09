@@ -34,6 +34,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLDecoder;
 import org.osgi.framework.Bundle;
 
 /**
@@ -50,7 +51,8 @@ public class ResourceFinder {
             return null;
         } else {
             if (resource.getProtocol().equals("file")) {
-                return new FileReader(resource.getFile());
+                final File trgFile = new File(URLDecoder.decode(resource.getFile(),"UTF-8"));
+                return new FileReader(trgFile);
             } else {
                 return new InputStreamReader(resource.openStream());
             }
