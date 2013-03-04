@@ -1,35 +1,31 @@
 package eu.monnetproject.lemon.stl.test;
 
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URI;
 import java.util.Collection;
+import java.util.List;
 
-import eu.monnetproject.data.FileDataSource;
+import com.beinformed.framework.osgi.osgitest.TestMonitor;
+import com.beinformed.framework.osgi.osgitest.annotation.TestCase;
+import com.beinformed.framework.osgi.osgitest.annotation.TestSuite;
+
 import eu.monnetproject.label.LabelExtractorFactory;
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.lemon.LemonModel;
 import eu.monnetproject.lemon.LemonSerializer;
+import eu.monnetproject.lemon.generator.GeneratorActor;
+import eu.monnetproject.lemon.generator.LemonGenerator;
+import eu.monnetproject.lemon.generator.LemonGeneratorConfig;
 import eu.monnetproject.lemon.generator.lela.LeLAManager;
 import eu.monnetproject.lemon.model.LexicalEntry;
 import eu.monnetproject.lemon.model.Lexicon;
 import eu.monnetproject.lemon.model.Node;
 import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.ontology.OntologySerializer;
-import eu.monnetproject.framework.test.TestMonitor;
-import eu.monnetproject.framework.test.annotation.TestCase;
-import eu.monnetproject.framework.test.annotation.TestSuite;
-import eu.monnetproject.lemon.generator.GeneratorActor;
-import eu.monnetproject.lemon.generator.LemonGenerator;
-import eu.monnetproject.lemon.generator.LemonGeneratorConfig;
 import eu.monnetproject.util.Logger;
 import eu.monnetproject.util.Logging;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
-import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
-import org.osgi.framework.ServiceReference;
 
 @TestSuite(label = "GeneratorAndPhraseRootTest")
 public class GeneratorAndPhraseRootTest {
@@ -55,7 +51,7 @@ public class GeneratorAndPhraseRootTest {
         if (!ontologyFile.exists()) {
             ontologyFile = new File("eu.monnetproject.lemon.stl.test/" + testOntology);
             if(!ontologyFile.exists()) {
-                monitor.fail(System.getProperty("user.dir") + System.getProperty("file.separator") + "src/test/resources/" + testOntology + " does not exist");
+                monitor.error(System.getProperty("user.dir") + System.getProperty("file.separator") + "src/test/resources/" + testOntology + " does not exist", null);
             }
         }
         try {

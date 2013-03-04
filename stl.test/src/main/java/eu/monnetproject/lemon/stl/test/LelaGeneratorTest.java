@@ -5,7 +5,6 @@ import java.io.File;
 import java.net.URI;
 import java.util.Collection;
 
-import eu.monnetproject.data.FileDataSource;
 import eu.monnetproject.framework.services.Services;
 import eu.monnetproject.label.LabelExtractorFactory;
 import eu.monnetproject.lang.Language;
@@ -16,10 +15,6 @@ import eu.monnetproject.lemon.model.LexicalEntry;
 import eu.monnetproject.lemon.model.Lexicon;
 import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.ontology.OntologySerializer;
-import eu.monnetproject.framework.test.TestMonitor;
-import eu.monnetproject.framework.test.annotation.TestCase;
-import eu.monnetproject.framework.test.annotation.TestSuite;
-import eu.monnetproject.lemon.generator.*;
 import eu.monnetproject.lemon.generator.*;
 import eu.monnetproject.util.Logger;
 import eu.monnetproject.util.Logging;
@@ -27,9 +22,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
-import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
-import org.osgi.framework.ServiceReference;
+
+import com.beinformed.framework.osgi.osgitest.TestMonitor;
+import com.beinformed.framework.osgi.osgitest.annotation.TestCase;
+import com.beinformed.framework.osgi.osgitest.annotation.TestSuite;
 
 @TestSuite(label="LelaGeneratorTest")
 public class LelaGeneratorTest {
@@ -56,7 +52,7 @@ public class LelaGeneratorTest {
         if (!ontologyFile.exists()) {
             ontologyFile = new File("eu.monnetproject.lemon.stl.test/" + testOntology);
             if(!ontologyFile.exists()) {
-                monitor.fail(System.getProperty("user.dir") + System.getProperty("file.separator") + "src/test/resources/" + testOntology + " does not exist");
+                monitor.error(System.getProperty("user.dir") + System.getProperty("file.separator") + "src/test/resources/" + testOntology + " does not exist", null);
             }
         }
         try {
@@ -92,7 +88,7 @@ public class LelaGeneratorTest {
             }
         }
         if(!dessertWineGenerated) {
-            monitor.fail("Subnode not generated");
+            monitor.error("Subnode not generated", null);
         }
     }
     
@@ -104,11 +100,11 @@ public class LelaGeneratorTest {
             }
 
             @Override
-            public void beginTestSuite(eu.monnetproject.framework.test.TestSuite suite) {
+            public void beginTestSuite(com.beinformed.framework.osgi.osgitest.TestSuite suite) {
             }
 
             @Override
-            public void beginTest(eu.monnetproject.framework.test.TestCase testCase) {
+            public void beginTest(com.beinformed.framework.osgi.osgitest.TestCase testCase) {
             }
 
             @Override
@@ -120,15 +116,11 @@ public class LelaGeneratorTest {
             }
 
             @Override
-            public void fail(String message) {
+            public void endTest(com.beinformed.framework.osgi.osgitest.TestCase testCase) {
             }
 
             @Override
-            public void endTest(eu.monnetproject.framework.test.TestCase testCase) {
-            }
-
-            @Override
-            public void endTestSuite(eu.monnetproject.framework.test.TestSuite suite) {
+            public void endTestSuite(com.beinformed.framework.osgi.osgitest.TestSuite suite) {
             }
 
             @Override
