@@ -3,15 +3,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>lemon.generator.project</artifactId>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <version>1.13.3</version>
     </parent>
 
-    <groupId>eu.monnetproject</groupId>
+    <groupId>com.github.monnetproject</groupId>
     <artifactId>lemon.generator.stl.web</artifactId>
     <packaging>war</packaging>
 
-    <name>eu.monnetproject.lemon.generator.stl.web</name>
+    <name>com.github.monnetproject.lemon.generator.stl.web</name>
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>

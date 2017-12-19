@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <artifactId>lemon.generator.project</artifactId>
         <version>1.13.3</version>
         <relativePath>..</relativePath>
@@ -12,7 +12,7 @@
     <artifactId>lemon.generator.stl</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.lemon.generator.stl OSGi Bundle</name>
+    <name>com.github.monnetproject.lemon.generator.stl OSGi Bundle</name>
 
     <dependencies>
         <dependency>
@@ -21,7 +21,7 @@
             <version>1.4.0</version>
         </dependency>
         <dependency>
-            <groupId>eu.monnetproject</groupId>
+            <groupId>com.github.monnetproject</groupId>
             <artifactId>lemon.generator.nlp.core</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -108,7 +108,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.2.1</version>
                 <configuration>
-                    <mainClass>eu.monnetproject.lemon.generator.lela.Main</mainClass>
+                    <mainClass>com.github.monnetproject.lemon.generator.lela.Main</mainClass>
                 </configuration>
             </plugin>-->
         </plugins>

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
     <artifactId>lemon.generator.project</artifactId>
-    <groupId>eu.monnetproject</groupId>
+    <groupId>com.github.monnetproject</groupId>
     <version>1.13.3</version>
     <relativePath>..</relativePath>
   </parent>
@@ -11,7 +11,7 @@
     <artifactId>lemon.generator.util</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.lemon.generator.util OSGi Bundle</name>
+    <name>com.github.monnetproject.lemon.generator.util OSGi Bundle</name>
     <dependencies>
         <dependency>
             <groupId>org.apache.felix</groupId>

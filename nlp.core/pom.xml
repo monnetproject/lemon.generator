@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <artifactId>lemon.generator.project</artifactId>
         <version>1.13.3</version>
         <relativePath>..</relativePath>
@@ -13,7 +13,7 @@
     <artifactId>lemon.generator.nlp.core</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.lemon.generator.nlp.core OSGi Bundle</name>
+    <name>com.github.monnetproject.lemon.generator.nlp.core OSGi Bundle</name>
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
