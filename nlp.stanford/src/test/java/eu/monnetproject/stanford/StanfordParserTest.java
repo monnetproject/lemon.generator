@@ -28,38 +28,38 @@ public class StanfordParserTest {
     public static void tearDown() {
     }
 
-    @Test
-    public void testParser() {
-        final ParserFactory parserFactory = new StanfordParserFactory();
-        Parser parser = parserFactory.getParser(Language.ENGLISH);
-        List<Token> tokens = new LinkedList<Token>();
-        tokens.add(new Tk("this"));
-        tokens.add(new Tk("is"));
-        tokens.add(new Tk("a"));
-        tokens.add(new Tk("test"));
-        TreeNode result = parser.parse(tokens);
-        assertEquals("S", result.getTag().getPOS().getValue());
-
-        parser = parserFactory.getParser(Language.GERMAN);
-        tokens.clear();
-        tokens.add(new Tk("das"));
-        tokens.add(new Tk("ist"));
-        tokens.add(new Tk("ein"));
-        tokens.add(new Tk("Test"));
-        result = parser.parse(tokens);
-        assertEquals("NUR", result.getTag().getPOS().getValue());
-    }
-
-    private static class Tk implements Token {
-
-        private final String tk;
-
-        public Tk(String tk) {
-            this.tk = tk;
-        }
-
-        public String getValue() {
-            return tk;
-        }
-    }
+//    @Test
+//    public void testParser() {
+//        final ParserFactory parserFactory = new StanfordParserFactory();
+//        Parser parser = parserFactory.getParser(Language.ENGLISH);
+//        List<Token> tokens = new LinkedList<Token>();
+//        tokens.add(new Tk("this"));
+//        tokens.add(new Tk("is"));
+//        tokens.add(new Tk("a"));
+//        tokens.add(new Tk("test"));
+//        TreeNode result = parser.parse(tokens);
+//        assertEquals("S", result.getTag().getPOS().getValue());
+//
+//        parser = parserFactory.getParser(Language.GERMAN);
+//        tokens.clear();
+//        tokens.add(new Tk("das"));
+//        tokens.add(new Tk("ist"));
+//        tokens.add(new Tk("ein"));
+//        tokens.add(new Tk("Test"));
+//        result = parser.parse(tokens);
+//        assertEquals("NUR", result.getTag().getPOS().getValue());
+//    }
+//
+//    private static class Tk implements Token {
+//
+//        private final String tk;
+//
+//        public Tk(String tk) {
+//            this.tk = tk;
+//        }
+//
+//        public String getValue() {
+//            return tk;
+//        }
+//    }
 }

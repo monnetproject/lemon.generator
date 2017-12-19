@@ -19,40 +19,40 @@ import java.io.FileWriter;
 public class TestSemanticAnalysis {
 
 
-	@Test
-	public void TestSemanticAnalyser() throws FileNotFoundException, IOException{
-		
-		// name of lexicon
-		String TEST_LEXICON = "finance_ex2";
-		
-		// init semantic analyzer
-		SemanticAnalyzer semanticAnalyzer = new SemanticAnalyzer();
-
-		// init lemon stuff and read lexicon
-                
-		LemonSerializer lemonSerializer = LemonSerializer.newInstance();
-		FileReader fileSource = new FileReader(new File("src/test/resources/data/lexica/"+TEST_LEXICON+".ttl"));
-                System.err.println(LemonSerializer.class.getProtectionDomain().getCodeSource().getLocation());
-		LemonModel model = lemonSerializer.read(fileSource);
-
-		// add rule (conjunctive or)
-		semanticAnalyzer.addRule(new SemanticSenseRelationRule("(([a-zA-Z]+) or ([a-zA-Z]+))", 1, 2, null, SenseRelation.narrower));
-		semanticAnalyzer.addRule(new SemanticSenseRelationRule("(([a-zA-Z]+) or ([a-zA-Z]+))", 1, 3, null, SenseRelation.narrower));
-		
-//		// add rule (parenthesis)
-//		semanticAnalyzer.addRule(new SemanticSenseRelationRule("(([a-zA-Z]+) \\(([a-zA-Z]+)\\))", 1, 2, null, SenseRelation.narrower));
-//		semanticAnalyzer.addRule(new SemanticSenseRelationRule("(([a-zA-Z]+) \\(([a-zA-Z]+)\\))", 1, 3, null, SenseRelation.narrower));
-
-		// do semantic analysis
-		for(Lexicon l:model.getLexica())
-			for(LexicalEntry entry:l.getEntrys())
-				semanticAnalyzer.perform(entry, new GenerationStateImpl(Language.ENGLISH, model));
-		
-		// serialize model
-		File turtleFile = new File("src/test/resources/data/lexica/"+TEST_LEXICON+"_enriched.ttl");
-		FileWriter fileDataTarget = new FileWriter(turtleFile);
-		lemonSerializer.write(model, fileDataTarget);
-		
-	}
-	
+//	@Test
+//	public void TestSemanticAnalyser() throws FileNotFoundException, IOException{
+//		
+//		// name of lexicon
+//		String TEST_LEXICON = "finance_ex2";
+//		
+//		// init semantic analyzer
+//		SemanticAnalyzer semanticAnalyzer = new SemanticAnalyzer();
+//
+//		// init lemon stuff and read lexicon
+//                
+//		LemonSerializer lemonSerializer = LemonSerializer.newInstance();
+//		FileReader fileSource = new FileReader(new File("src/test/resources/data/lexica/"+TEST_LEXICON+".ttl"));
+//                System.err.println(LemonSerializer.class.getProtectionDomain().getCodeSource().getLocation());
+//		LemonModel model = lemonSerializer.read(fileSource);
+//
+//		// add rule (conjunctive or)
+//		semanticAnalyzer.addRule(new SemanticSenseRelationRule("(([a-zA-Z]+) or ([a-zA-Z]+))", 1, 2, null, SenseRelation.narrower));
+//		semanticAnalyzer.addRule(new SemanticSenseRelationRule("(([a-zA-Z]+) or ([a-zA-Z]+))", 1, 3, null, SenseRelation.narrower));
+//		
+////		// add rule (parenthesis)
+////		semanticAnalyzer.addRule(new SemanticSenseRelationRule("(([a-zA-Z]+) \\(([a-zA-Z]+)\\))", 1, 2, null, SenseRelation.narrower));
+////		semanticAnalyzer.addRule(new SemanticSenseRelationRule("(([a-zA-Z]+) \\(([a-zA-Z]+)\\))", 1, 3, null, SenseRelation.narrower));
+//
+//		// do semantic analysis
+//		for(Lexicon l:model.getLexica())
+//			for(LexicalEntry entry:l.getEntrys())
+//				semanticAnalyzer.perform(entry, new GenerationStateImpl(Language.ENGLISH, model));
+//		
+//		// serialize model
+//		File turtleFile = new File("src/test/resources/data/lexica/"+TEST_LEXICON+"_enriched.ttl");
+//		FileWriter fileDataTarget = new FileWriter(turtleFile);
+//		lemonSerializer.write(model, fileDataTarget);
+//		
+//	}
+//	
 }
